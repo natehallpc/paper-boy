@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+    .public-DraftEditor-content {
+      white-space: normal !important;
+    }
+  
+    a[x-apple-data-detectors] {
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+    }
+  </style>
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i&amp;display=swap" rel="stylesheet">
+<style>
+  @media screen and (max-width: 460px) {
+    .panel-text .twoColumnGroup .column,
+    .panel-text .threeColumnGroup .column {
+      max-width: 100% !important;
+    }
+    .panel-text .twoColumnGroup .column .collapsed {
+      margin-top: 0.5em !important;
+      text-align: left !important;
+    }
+    .panel-text {
+      max-width: 100% !important;
+    }
+  }
+
+  @media screen and (min-width: 461px) and (max-width: 620px) {
+    .panel-text .twoColumnGroup .column {
+      max-width: 50% !important;
+    }
+    .panel-text .threeColumnGroup .column {
+      max-width: 33% !important;
+    }
+  }
+
+    @media screen and (max-width: 460px) {
+      .panel-image-4 {
+        display: table;
+      }
+
+      .panel-image-4 .twoColumnGroup img {
+        max-width: 100% !important;
+      }
+
+      .panel-image-4 .twoColumnGroup .column {
+        max-width: 100% !important;
+      }
+
+      .panel-image-4 .threeColumnGroup img {
+        max-width: 100% !important;
+      }
+
+      .panel-image-4 .threeColumnGroup .column {
+        max-width: 100% !important;
+      }
+    }
+
+    @media screen and (max-width: 599px) {
+      .panel-image-4 .fourColumnGroup img {
+        max-width: 100% !important;
+      }
+
+      .panel-image-4 .fourColumnGroup .column {
+        max-width: 50% !important;
+      }
+    }
+
+    @media screen and (min-width: 461px) and (max-width: 620px) {
+      .panel-image-4 .twoColumnGroup .column {
+        max-width: 50% !important;
+      }
+
+      .panel-image-4 .threeColumnGroup .column {
+        max-width: 33% !important;
+      }
+    }
+  
+    @media screen and (max-width: 460px) {
+      .panel-image-7 {
+        display: table;
+      }
+
+      .panel-image-7 .twoColumnGroup img {
+        max-width: 100% !important;
+      }
+
+      .panel-image-7 .twoColumnGroup .column {
+        max-width: 100% !important;
+      }
+
+      .panel-image-7 .threeColumnGroup img {
+        max-width: 100% !important;
+      }
+
+      .panel-image-7 .threeColumnGroup .column {
+        max-width: 100% !important;
+      }
+    }
+
+    @media screen and (max-width: 599px) {
+      .panel-image-7 .fourColumnGroup img {
+        max-width: 100% !important;
+      }
+
+      .panel-image-7 .fourColumnGroup .column {
+        max-width: 50% !important;
+      }
+    }
+
+    @media screen and (min-width: 461px) and (max-width: 620px) {
+      .panel-image-7 .twoColumnGroup .column {
+        max-width: 50% !important;
+      }
+
+      .panel-image-7 .threeColumnGroup .column {
+        max-width: 33% !important;
+      }
+    }
+  
+  @media screen and (max-width: 460px) {
+    .panel-mixed-vertical .twoColumnGroup .column,
+    .panel-mixed-vertical .twoColumnGroup img,
+    .panel-mixed-vertical .threeColumnGroup .column,
+    .panel-mixed-vertical .threeColumnGroup img {
+      max-width: 100% !important;
+    }
+  }
+
+  @media screen and (min-width: 461px) and (max-width: 620px) {
+    .panel-mixed-vertical .twoColumnGroup .column {
+      max-width: 50% !important;
+    }
+    .panel-mixed-vertical .threeColumnGroup .column {
+      max-width: 33% !important;
+    }
+  }
+
+    @media screen and (max-width: 460px) {
+      .panel-mixed-horizontal-12 .column {
+        max-width: 100% !important;
+      }
+      .panel-mixed-horizontal-12 .imgColumn {
+        
+      }
+      .panel-mixed-horizontal-12 .twoColumnGroup img {
+        max-width: 100% !important;
+      }
+    }
+
+    @media screen and (min-width: 461px) and (max-width: 620px) {
+      .panel-mixed-horizontal-12 .twoColumnGroup .column {
+        max-width: 50% !important;
+      }
+    }
+  
+    @media screen and (max-width: 460px) {
+      .panel-mixed-horizontal-13 .column {
+        max-width: 100% !important;
+      }
+      .panel-mixed-horizontal-13 .imgColumn {
+        
+      }
+      .panel-mixed-horizontal-13 .twoColumnGroup img {
+        max-width: 100% !important;
+      }
+    }
+
+    @media screen and (min-width: 461px) and (max-width: 620px) {
+      .panel-mixed-horizontal-13 .twoColumnGroup .column {
+        max-width: 50% !important;
+      }
+    }
+  
+    @media screen and (max-width: 460px) {
+      .panel-mixed-horizontal-14 .column {
+        max-width: 100% !important;
+      }
+      .panel-mixed-horizontal-14 .imgColumn {
+        
+      }
+      .panel-mixed-horizontal-14 .twoColumnGroup img {
+        max-width: 100% !important;
+      }
+    }
+
+    @media screen and (min-width: 461px) and (max-width: 620px) {
+      .panel-mixed-horizontal-14 .twoColumnGroup .column {
+        max-width: 50% !important;
+      }
+    }
+  
+    @media screen and (max-width: 460px) {
+      .panel-mixed-horizontal-15 .column {
+        max-width: 100% !important;
+      }
+      .panel-mixed-horizontal-15 .imgColumn {
+        
+      }
+      .panel-mixed-horizontal-15 .twoColumnGroup img {
+        max-width: 100% !important;
+      }
+    }
+
+    @media screen and (min-width: 461px) and (max-width: 620px) {
+      .panel-mixed-horizontal-15 .twoColumnGroup .column {
+        max-width: 50% !important;
+      }
+    }
+  
+    @media screen and (max-width: 460px) {
+      .panel-image-17 {
+        display: table;
+      }
+
+      .panel-image-17 .twoColumnGroup img {
+        max-width: 100% !important;
+      }
+
+      .panel-image-17 .twoColumnGroup .column {
+        max-width: 100% !important;
+      }
+
+      .panel-image-17 .threeColumnGroup img {
+        max-width: 100% !important;
+      }
+
+      .panel-image-17 .threeColumnGroup .column {
+        max-width: 100% !important;
+      }
+    }
+
+    @media screen and (max-width: 599px) {
+      .panel-image-17 .fourColumnGroup img {
+        max-width: 100% !important;
+      }
+
+      .panel-image-17 .fourColumnGroup .column {
+        max-width: 50% !important;
+      }
+    }
+
+    @media screen and (min-width: 461px) and (max-width: 620px) {
+      .panel-image-17 .twoColumnGroup .column {
+        max-width: 50% !important;
+      }
+
+      .panel-image-17 .threeColumnGroup .column {
+        max-width: 33% !important;
+      }
+    }
+  
+  @media screen and (max-width: 460px) {
+    .panel-property-list .twoColumnGroup .column,
+    .panel-property-list .resetMaxWidth img {
+      max-width: 100% !important;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .panel-property-list .primary,
+    .panel-property-list .secondary {
+      display: block !important;
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+    .panel-property-list .primary {}
+    .panel-property-list .secondary {
+      text-align: left !important;
+    }
+  }
+
+  @media screen and (min-width: 461px) and (max-width: 620px) {
+    .panel-property-list .twoColumnGroup .imageColumn {
+      max-width: 40% !important;
+    }
+
+    .panel-property-list .twoColumnGroup .textColumn {
+      max-width: 60% !important;
+    }
+  }
+
+    @media screen and (max-width: 460px) {
+      .panel-image-20 {
+        display: table;
+      }
+
+      .panel-image-20 .twoColumnGroup img {
+        max-width: 100% !important;
+      }
+
+      .panel-image-20 .twoColumnGroup .column {
+        max-width: 100% !important;
+      }
+
+      .panel-image-20 .threeColumnGroup img {
+        max-width: 100% !important;
+      }
+
+      .panel-image-20 .threeColumnGroup .column {
+        max-width: 100% !important;
+      }
+    }
+
+    @media screen and (max-width: 599px) {
+      .panel-image-20 .fourColumnGroup img {
+        max-width: 100% !important;
+      }
+
+      .panel-image-20 .fourColumnGroup .column {
+        max-width: 50% !important;
+      }
+    }
+
+    @media screen and (min-width: 461px) and (max-width: 620px) {
+      .panel-image-20 .twoColumnGroup .column {
+        max-width: 50% !important;
+      }
+
+      .panel-image-20 .threeColumnGroup .column {
+        max-width: 33% !important;
+      }
+    }
+  
+    @media screen and (max-width: 460px) {
+      .panel-image-23 {
+        display: table;
+      }
+
+      .panel-image-23 .twoColumnGroup img {
+        max-width: 100% !important;
+      }
+
+      .panel-image-23 .twoColumnGroup .column {
+        max-width: 100% !important;
+      }
+
+      .panel-image-23 .threeColumnGroup img {
+        max-width: 100% !important;
+      }
+
+      .panel-image-23 .threeColumnGroup .column {
+        max-width: 100% !important;
+      }
+    }
+
+    @media screen and (max-width: 599px) {
+      .panel-image-23 .fourColumnGroup img {
+        max-width: 100% !important;
+      }
+
+      .panel-image-23 .fourColumnGroup .column {
+        max-width: 50% !important;
+      }
+    }
+
+    @media screen and (min-width: 461px) and (max-width: 620px) {
+      .panel-image-23 .twoColumnGroup .column {
+        max-width: 50% !important;
+      }
+
+      .panel-image-23 .threeColumnGroup .column {
+        max-width: 33% !important;
+      }
+    }
+  
+    @media screen and (max-width: 460px) {
+      .panel-mixed-horizontal-27 .column {
+        max-width: 100% !important;
+      }
+      .panel-mixed-horizontal-27 .imgColumn {
+        
+      }
+      .panel-mixed-horizontal-27 .twoColumnGroup img {
+        max-width: 100% !important;
+      }
+    }
+
+    @media screen and (min-width: 461px) and (max-width: 620px) {
+      .panel-mixed-horizontal-27 .twoColumnGroup .column {
+        max-width: 50% !important;
+      }
+    }
+  </style>
+<meta property="og:title" content="June Lifestyle and ReaL Estate Update">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://sp.activepipe.com/image/121763244/XwZMDgcEUVVQU1tXSA5bV1ZJDAZUAEtWBF1VGgEEVlUGBwNRVVdQAQ==">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RV9PF03YNH"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-RV9PF03YNH');
+</script>
+</head>
+<body style="Margin:0;background-color:#F3F5F6">
+<img width="1" height="1" src="?mode=img" style="display:block;border:0"><div width="1" height="1" style="display:block;border:0;background-image:url('?mode=css')"></div>
+<center style="width:100%;table-layout:fixed;text-size-adjust:100%">
+<div style="max-width:600px;Margin:0 auto">
+<!--[if (gte mso 9)|(IE)]><table width="600" align="center" cellpadding="0" cellspacing="0"><tr><td><![endif]--><table width="100%" style="border-spacing:0;font-family:sans-serif;table-layout:fixed;Margin:0 auto;width:100%;max-width:600px" cellpadding="0" cellspacing="0" class="panel-text"><tbody><tr><td style="padding:10px;text-align:center;font-size:0" class="oneColumnGroup"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:0"><div style="width:100%;display:inline-block;vertical-align:top;max-width:580px" class="column"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:0;width:100%;text-align:left;font-size:11px;word-break:break-word;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;color:#666666;line-height:18px;font-weight:400;font-style:normal"><div class="DraftEditor-root"><div class="DraftEditor-editorContainer"><div class="public-DraftEditor-content" contenteditable="false" spellcheck="false" style="outline:none;user-select:text;-webkit-user-select:text;white-space: normal;word-wrap:break-word"><div data-contents="true"><div class="" data-block="true" data-editor="9ioa" data-offset-key="fu3go-0-0"><div style="text-align:center"><div data-offset-key="fu3go-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr">
+<span data-offset-key="fu3go-0-0"><span data-text="true">Having trouble viewing this email? </span></span><a href="https://managemypreferences.com/preview?page=activepipe-view-online" style="color:#666666;text-decoration:underline"><span style="color:#666666;text-decoration:underline"><span data-offset-key="fu3go-1-0"><span data-text="true">Click here</span></span></span></a><span data-offset-key="fu3go-2-0"><span data-text="true"> to view in your web browser.</span></span>
+</div></div></div></div></div></div></div></td></tr></tbody></table></div></td></tr></tbody></table></td></tr></tbody></table>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+</div>
+<div style="max-width:600px;Margin:0 auto">
+<!--[if (gte mso 9)|(IE)]><table width="600" align="center" cellpadding="0" cellspacing="0"><tr><td><![endif]--><table width="100%" bgcolor="#ffffff" style="border-spacing:0;font-family:sans-serif;Margin:0 auto;width:100%;max-width:600px;background-color:#ffffff" cellpadding="0" cellspacing="0"><tbody>
+<tr><td style="padding:0"><img style="width:100%;border:0;display:block;Margin:0 auto;height:0" height="0" src="https://d2wn0fwevmicfp.cloudfront.net/images/empty.gif" alt=" "></td></tr>
+<tr><td style="padding:0;background-color:#eeeeee;font-size:1px;line-height:1px" bgcolor="#eeeeee" height="1" width="100%"><img style="width:100%;border:0;display:block;Margin:0 auto;height:1px" height="1" src="https://d2wn0fwevmicfp.cloudfront.net/images/empty.gif" alt=" "></td></tr>
+<tr><td style="padding:0"><img style="width:100%;border:0;display:block;Margin:0 auto;height:0" height="0" src="https://d2wn0fwevmicfp.cloudfront.net/images/empty.gif" alt=" "></td></tr>
+</tbody></table>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+</div>
+<div style="max-width:600px;Margin:0 auto">
+<!--[if (gte mso 9)|(IE)]><table width="600" align="center" cellpadding="0" cellspacing="0"><tr><td><![endif]--><table width="100%" style="border-spacing:0;font-family:sans-serif;Margin:0 auto;width:100%;max-width:600px" cellpadding="0" cellspacing="0"><tbody><tr><td bgcolor="#ffffff" style="padding:0;background-color:#ffffff"><img style="width:100%;border:0;height:35px" height="35" src="https://d2wn0fwevmicfp.cloudfront.net/images/empty.gif" alt=" "></td></tr></tbody></table>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+</div>
+<div style="max-width:600px;Margin:0 auto">
+<!--[if (gte mso 9)|(IE)]><table width="600" align="center" cellpadding="0" cellspacing="0"><tr><td><![endif]--><table width="100%" style="border-spacing:0;font-family:sans-serif;Margin:0 auto;width:100%;max-width:600px" cellpadding="0" cellspacing="0"><tbody><tr><td bgcolor="#ffffff" style="padding:15px 0px 33px;background-color:#ffffff"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:0;font-size:14px;color:#000000;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;line-height:21px;text-align:center;mso-line-height-rule:at-least"><a href="https://www.summitsothebysrealty.com/" style="border-style:none"> <img src="https://images.activepipe.com/image/2996126/CVVNDANSDFdUBgdRG1EECwhJA1dRWx5VBwJbGQBQDQZTUgAJBA8NWw==" style="border:0;display:inline-block;border-style:none;max-width:250px" width="250" border="0" alt=""> </a></td></tr></tbody></table></td></tr></tbody></table>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+</div>
+<div style="max-width:600px;Margin:0 auto">
+<!--[if (gte mso 9)|(IE)]><table width="600" align="center" cellpadding="0" cellspacing="0"><tr><td><![endif]--><table width="100%" style="border-spacing:0;font-family:sans-serif;Margin:0 auto;width:100%;max-width:600px" cellpadding="0" cellspacing="0" class="panel-image-4"><tbody><tr><td style="padding:0;text-align:center;font-size:0" class="oneColumnGroup"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:0"><div class="column" style="width:100%;display:inline-block;vertical-align:top;max-width:600px"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:0;width:100%;text-align:left;font-size:14px;color:#000000;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;line-height:21px;mso-line-height-rule:at-least"><img src="https://sp.activepipe.com/image/121763244/XwZMDgcEUVVQU1tXSA5bV1ZJDAZUAEtWBF1VGgEEVlUGBwNRVVdQAQ==" style="width:100%;border:0;display:block;border-style:none;max-width:600px" width="600" border="0" alt=""></td></tr></tbody></table></div></td></tr></tbody></table></td></tr></tbody></table>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+</div>
+<div style="max-width:600px;Margin:0 auto;background-color:#ffffff">
+<!--[if (gte mso 9)|(IE)]><table width="600" align="center" cellpadding="0" cellspacing="0"><tr><td><![endif]--><table width="100%" style="border-spacing:0;font-family:sans-serif;table-layout:fixed;Margin:0 auto;width:100%;max-width:600px" cellpadding="0" cellspacing="0" class="panel-text"><tbody><tr><td bgcolor="#ffffff" style="padding:15px;text-align:center;font-size:0" class="oneColumnGroup"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:0"><div style="width:100%;display:inline-block;vertical-align:top;max-width:570px" class="column"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:10px;width:100%;text-align:left;font-size:14px;word-break:break-word;color:#000000;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;line-height:21px"><div class="DraftEditor-root"><div class="DraftEditor-editorContainer"><div class="public-DraftEditor-content" contenteditable="false" spellcheck="false" style="outline:none;user-select:text;-webkit-user-select:text;white-space: normal;word-wrap:break-word"><div data-contents="true">
+<div class="" data-block="true" data-editor="9cjl1" data-offset-key="dlh8s-0-0" style="font-size:30px;color:#000000;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;font-style:normal;line-height:35px"><div style="text-align:center"><div data-offset-key="dlh8s-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span data-offset-key="dlh8s-0-0" style="font-weight:bold"><span data-text="true">SUMMER BEGINS HERE</span></span></div></div></div>
+<div class="" data-block="true" data-editor="9cjl1" data-offset-key="92i7e-0-0" style="color:#000000;font-size:14px;font-family:Freight, Georgia, Times New Roman, serif;font-weight:400;font-style:normal;line-height:26px"><br></div>
+<div class="" data-block="true" data-editor="9cjl1" data-offset-key="ddt9l-0-0"><div style="text-align:center"><div data-offset-key="ddt9l-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span data-offset-key="ddt9l-0-0"><span data-text="true">From hiking and biking trails, amazing dining events and farmers markets, to ziplines and alpine slides, Park City is your town for summer adventures.</span></span></div></div></div>
+</div></div></div></div></td></tr></tbody></table></div></td></tr></tbody></table></td></tr></tbody></table>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+</div>
+<div style="max-width:600px;Margin:0 auto">
+<!--[if (gte mso 9)|(IE)]><table width="600" align="center" cellpadding="0" cellspacing="0"><tr><td><![endif]--><table width="100%" bgcolor="#ffffff" style="border-spacing:0;font-family:sans-serif;Margin:0 auto;width:100%;max-width:600px;background-color:#ffffff" cellpadding="0" cellspacing="0"><tbody>
+<tr><td style="padding:0" colspan="3"><img style="width:100%;border:0;display:block;Margin:0 auto;height:20px" height="20" src="https://d2wn0fwevmicfp.cloudfront.net/images/empty.gif" alt=" "></td></tr>
+<tr>
+<td style="padding:0;font-size:1px;line-height:1px" width="20%" height="1"><img style="width:100%;border:0;display:block;Margin:0 auto;height:1px" height="1" src="https://d2wn0fwevmicfp.cloudfront.net/images/empty.gif" alt=" "></td>
+<td style="padding:0;background-color:#aaacab;font-size:1px;line-height:1px" bgcolor="#aaacab" height="1" width="60%"><img style="width:100%;border:0;display:block;Margin:0 auto;height:1px" height="1" src="https://d2wn0fwevmicfp.cloudfront.net/images/empty.gif" alt=" "></td>
+<td style="padding:0;font-size:1px;line-height:1px" width="20%" height="1"><img style="width:100%;border:0;display:block;Margin:0 auto;height:1px" height="1" src="https://d2wn0fwevmicfp.cloudfront.net/images/empty.gif" alt=" "></td>
+</tr>
+<tr><td style="padding:0" colspan="3"><img style="width:100%;border:0;display:block;Margin:0 auto;height:20px" height="20" src="https://d2wn0fwevmicfp.cloudfront.net/images/empty.gif" alt=" "></td></tr>
+</tbody></table>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+</div>
+<div style="max-width:600px;Margin:0 auto">
+<!--[if (gte mso 9)|(IE)]><table width="600" align="center" cellpadding="0" cellspacing="0"><tr><td><![endif]--><table width="100%" style="border-spacing:0;font-family:sans-serif;Margin:0 auto;width:100%;max-width:600px" cellpadding="0" cellspacing="0" class="panel-image-7"><tbody><tr><td style="padding:0;text-align:center;font-size:0" class="oneColumnGroup"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:0"><div class="column" style="width:100%;display:inline-block;vertical-align:top;max-width:600px"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:0;width:100%;text-align:left;font-size:14px;color:#000000;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;line-height:21px;mso-line-height-rule:at-least"><img src="https://sp.activepipe.com/image/113789188/UlVABQYCA1wGBAdWFARVVVROVgRQCxtQUFlSGAMCBlEIAggMBVNQCQ==" style="width:100%;border:0;display:block;border-style:none;max-width:600px" width="600" border="0" alt=""></td></tr></tbody></table></div></td></tr></tbody></table></td></tr></tbody></table>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+</div>
+<div style="max-width:600px;Margin:0 auto">
+<!--[if (gte mso 9)|(IE)]><table width="600" align="center" cellpadding="0" cellspacing="0"><tr><td><![endif]--><table width="100%" style="border-spacing:0;font-family:sans-serif;Margin:0 auto;width:100%;max-width:600px" cellpadding="0" cellspacing="0" class="panel-mixed-vertical"><tbody><tr><td bgcolor="#eeeeee" style="padding:10px;text-align:center;font-size:0;border-collapse:collapse;background-color:#eeeeee" class="twoColumnGroup"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td bgcolor="#eeeeee" style="padding:0;background-color:#eeeeee">
+<!--[if (gte mso 9)|(IE)]><table width="100%" cellpadding="0" cellspacing="0"><tr><td width="290" valign="top"><![endif]--><div style="width:100%;display:inline-block;vertical-align:top;max-width:290px" class="column"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody>
+<tr><td style="padding:10px;width:100%;text-align:left;font-size:14px;word-break:break-word;color:#000000;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;line-height:21px;mso-line-height-rule:at-least"><img src="https://sp.activepipe.com/image/121764399/DVZOXlcFAVdQUQFYGgUCAgNMBVxaWhxWXQoJG1dWAwFQUQcAVFVRVw==" style="width:100%;border:0;display:block;border-style:none;max-width:270px" width="270" border="0" alt=""></td></tr>
+<tr><td style="padding:10px;width:100%;text-align:left;font-size:14px;word-break:break-word;color:#000000;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;line-height:21px"><div class="DraftEditor-root"><div class="DraftEditor-editorContainer"><div class="public-DraftEditor-content" contenteditable="false" spellcheck="false" style="outline:none;user-select:text;-webkit-user-select:text;white-space: normal;word-wrap:break-word"><div data-contents="true">
+<div class="" data-block="true" data-editor="2pi77" data-offset-key="8rbmd-0-0" style="font-size:14px;color:#000000;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;line-height:21px"><div style="text-align:left"><div data-offset-key="8rbmd-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span data-offset-key="8rbmd-0-0" style="font-weight:bold;text-decoration:underline"><span data-text="true">PARK CITY MOUNTAIN RESORT</span></span></div></div></div>
+<div class="" data-block="true" data-editor="2pi77" data-offset-key="bqeb0-0-0" style="font-size:14px;color:#000000;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;line-height:21px"><div style="text-align:left"><div data-offset-key="bqeb0-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr">
+<span data-offset-key="bqeb0-0-0"><span data-text="true">Summer season begins June 7th with daily lift operations from 10am -  4pm. The Mountain Coaster and zipline will run daily from 11am - 4pm. For more information and tickets </span></span><a href="https://www.parkcitymountain.com/explore-the-resort/about-the-resort/hours-of-operation.aspx" style="color:#002349;text-decoration:underline"><span style="color:#002349;text-decoration:underline"><span data-offset-key="bqeb0-1-0"><span data-text="true">CLICK HERE.</span></span></span></a>
+</div></div></div>
+<div class="" data-block="true" data-editor="2pi77" data-offset-key="fouo-0-0" style="font-size:14px;color:#000000;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;line-height:21px"><br></div>
+<div class="" data-block="true" data-editor="2pi77" data-offset-key="dvrjs-0-0" style="font-size:14px;color:#000000;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;line-height:21px"><div style="text-align:left"><div data-offset-key="dvrjs-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span data-offset-key="dvrjs-0-0" style="font-weight:bold;text-decoration:underline"><span data-text="true">DEER VALLEY RESORT</span></span></div></div></div>
+<div class="" data-block="true" data-editor="2pi77" data-offset-key="eeluq-0-0" style="font-size:14px;color:#000000;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;line-height:21px"><div style="text-align:left"><div data-offset-key="eeluq-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr">
+<span data-offset-key="eeluq-0-0"><span data-text="true">Summer season begins June 20th with daily lift operations from 10am - 5pm. For More information and lift tickets </span></span><a href="https://www.deervalley.com/" style="color:#002349;text-decoration:underline"><span style="color:#002349;text-decoration:underline"><span data-offset-key="eeluq-1-0"><span data-text="true">CLICK HERE.</span></span></span></a><span data-offset-key="eeluq-2-0"><span data-text="true"> </span></span>
+</div></div></div>
+<div class="" data-block="true" data-editor="2pi77" data-offset-key="1ag8h-0-0" style="font-size:14px;color:#000000;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;line-height:21px"><br></div>
+<div class="" data-block="true" data-editor="2pi77" data-offset-key="3lknb-0-0" style="font-size:14px;color:#000000;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;line-height:21px"><div style="text-align:left"><div data-offset-key="3lknb-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span data-offset-key="3lknb-0-0" style="font-style:italic"><span data-text="true">PLEASE NOTE THAT DATES ARE WEATHER DEPENDENT AND ARE SUBJECT TO CHANGE. </span></span></div></div></div>
+</div></div></div></div></td></tr>
+</tbody></table></div>
+<!--[if (gte mso 9)|(IE)]></td><td width="290" valign="top"><![endif]--><div style="width:100%;display:inline-block;vertical-align:top;max-width:290px" class="column"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody>
+<tr><td style="padding:10px;width:100%;text-align:left;font-size:14px;word-break:break-word;color:#000000;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;line-height:21px;mso-line-height-rule:at-least"><img src="https://sp.activepipe.com/image/121764484/XlQbWFYPU1oEVwVVG1MKB1AdVgEEAhpTAQcETFVSA1ZXUgYBAABUUQ==" style="width:100%;border:0;display:block;border-style:none;max-width:270px" width="270" border="0" alt=""></td></tr>
+<tr><td style="padding:10px;width:100%;text-align:left;font-size:14px;word-break:break-word;color:#000000;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;line-height:21px"><div class="DraftEditor-root"><div class="DraftEditor-editorContainer"><div class="public-DraftEditor-content" contenteditable="false" spellcheck="false" style="outline:none;user-select:text;-webkit-user-select:text;white-space: normal;word-wrap:break-word"><div data-contents="true">
+<div class="" data-block="true" data-editor="dvmum" data-offset-key="497v3-0-0" style="font-size:14px;color:#000000;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;line-height:21px"><div style="text-align:left"><div data-offset-key="497v3-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span data-offset-key="497v3-0-0" style="font-weight:bold;text-decoration:underline"><span data-text="true">PARK CITY FARMERS MARKET</span></span></div></div></div>
+<div class="" data-block="true" data-editor="dvmum" data-offset-key="6llo2-0-0" style="font-size:14px;color:#000000;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;line-height:21px"><div style="text-align:left"><div data-offset-key="6llo2-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span data-offset-key="6llo2-0-0"><span data-text="true">Every Wednesday  |  11am - 5pm</span></span></div></div></div>
+<div class="" data-block="true" data-editor="dvmum" data-offset-key="2qi17-0-0" style="font-size:14px;color:#000000;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;line-height:21px"><div style="text-align:left"><div data-offset-key="2qi17-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span data-offset-key="2qi17-0-0"><span data-text="true">Park City Resort (First Time Chair Lift Parking Lot)</span></span></div></div></div>
+<div class="" data-block="true" data-editor="dvmum" data-offset-key="mqf2-0-0" style="font-size:14px;color:#000000;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;line-height:21px"><br></div>
+<div class="" data-block="true" data-editor="dvmum" data-offset-key="5eocs-0-0" style="font-size:14px;color:#000000;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;line-height:21px"><div style="text-align:left"><div data-offset-key="5eocs-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span data-offset-key="5eocs-0-0"><span data-text="true">This market offers a large assortment of fresh, local goods from Utah Farmers and vendors.</span></span></div></div></div>
+<div class="" data-block="true" data-editor="dvmum" data-offset-key="98qin-0-0" style="font-size:14px;color:#000000;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;line-height:21px"><br></div>
+<div class="" data-block="true" data-editor="dvmum" data-offset-key="3ra2p-0-0" style="font-size:14px;color:#000000;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;line-height:21px"><div style="text-align:left"><div data-offset-key="3ra2p-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span data-offset-key="3ra2p-0-0" style="font-weight:bold;text-decoration:underline"><span data-text="true">PARK SILLY SUNDAY MARKET</span></span></div></div></div>
+<div class="" data-block="true" data-editor="dvmum" data-offset-key="6baa5-0-0" style="font-size:14px;color:#000000;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;line-height:21px"><div style="text-align:left"><div data-offset-key="6baa5-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span data-offset-key="6baa5-0-0"><span data-text="true">Every Sunday  |  10am - 5pm </span></span></div></div></div>
+<div class="" data-block="true" data-editor="dvmum" data-offset-key="aj93b-0-0" style="font-size:14px;color:#000000;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;line-height:21px"><div style="text-align:left"><div data-offset-key="aj93b-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span data-offset-key="aj93b-0-0"><span data-text="true">Park City's Historic Main Street</span></span></div></div></div>
+<div class="" data-block="true" data-editor="dvmum" data-offset-key="f3euk-0-0" style="font-size:14px;color:#000000;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;line-height:21px"><br></div>
+<div class="" data-block="true" data-editor="dvmum" data-offset-key="67tg4-0-0" style="font-size:14px;color:#000000;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;line-height:21px"><div style="text-align:left"><div data-offset-key="67tg4-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span data-offset-key="67tg4-0-0"><span data-text="true">An ecofriendly open air market, street festival and community forum where neighbors and friends come together to celebrate our community of fun and funky Park Sillians.</span></span></div></div></div>
+</div></div></div></div></td></tr>
+</tbody></table></div>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+</td></tr></tbody></table></td></tr></tbody></table>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+</div>
+<div style="max-width:600px;Margin:0 auto">
+<!--[if (gte mso 9)|(IE)]><table width="600" align="center" cellpadding="0" cellspacing="0"><tr><td><![endif]--><table width="100%" style="border-spacing:0;font-family:sans-serif;Margin:0 auto;width:100%;max-width:600px" cellpadding="0" cellspacing="0" class="panel-mixed-vertical"><tbody><tr><td bgcolor="#ffffff" style="padding:10px;text-align:center;font-size:0;background-color:#ffffff" class="oneColumnGroup"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:0"><div style="width:100%;display:inline-block;vertical-align:top;max-width:580px" class="column"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody>
+<tr><td style="padding:10px;width:100%;text-align:left;font-size:14px;word-break:break-word;color:#000000;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;line-height:21px;mso-line-height-rule:at-least"><img src="https://sp.activepipe.com/image/121764230/CFYbXgsDUgQBUglfGAVTC1VIUlEBDxwLB10GTgJcVVACAFtUDAZRBw==" style="width:100%;border:0;display:block;border-style:none;max-width:560px" width="560" border="0" alt=""></td></tr>
+<tr><td style="padding:10px;width:100%;text-align:left;font-size:14px;word-break:break-word;color:#000000;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;line-height:21px"><div class="DraftEditor-root"><div class="DraftEditor-editorContainer"><div class="public-DraftEditor-content" contenteditable="false" spellcheck="false" style="outline:none;user-select:text;-webkit-user-select:text;white-space: normal;word-wrap:break-word"><div data-contents="true">
+<div class="" data-block="true" data-editor="6m3dp" data-offset-key="fkd5s-0-0"><div style="text-align:center"><div data-offset-key="fkd5s-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span data-offset-key="fkd5s-0-0" style="text-decoration:underline;font-weight:bold"><span data-text="true">SAVOR THE SUMMIT</span></span></div></div></div>
+<div class="" data-block="true" data-editor="6m3dp" data-offset-key="emo3m-0-0"><div style="text-align:center"><div data-offset-key="emo3m-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span data-offset-key="emo3m-0-0"><span data-text="true">Saturday, June 28th  |  6:00 pm</span></span></div></div></div>
+<div class="" data-block="true" data-editor="6m3dp" data-offset-key="4dc8v-0-0"><div style="text-align:center"><div data-offset-key="4dc8v-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span data-offset-key="4dc8v-0-0"><span data-text="true">Park City's Historic Main Street</span></span></div></div></div>
+<div class="" data-block="true" data-editor="6m3dp" data-offset-key="cvlba-0-0"><br></div>
+<div class="" data-block="true" data-editor="6m3dp" data-offset-key="etm6q-0-0"><div data-offset-key="etm6q-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span data-offset-key="etm6q-0-0"><span data-text="true">Join us for an unforgettable evening filled with exceptional cuisine, refreshing drinks, and live music, all set in the heart of Park City. This community celebration is the perfect way to experience the city’s vibrant culinary scene in a truly unique setting.</span></span></div></div>
+</div></div></div></div></td></tr>
+</tbody></table></div></td></tr></tbody></table></td></tr></tbody></table>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+</div>
+<div style="max-width:600px;Margin:0 auto">
+<!--[if (gte mso 9)|(IE)]><table width="600" align="center" cellpadding="0" cellspacing="0"><tr><td><![endif]--><table width="100%" style="border-spacing:0;font-family:sans-serif;Margin:0 auto;width:100%;max-width:600px" cellpadding="0" cellspacing="0"><tbody><tr><td bgcolor="#ffffff" style="padding:0;background-color:#ffffff"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:5px"><div style="Margin:3px 0px 0px 0;text-align:center"><span style="display:inline-block"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="color:#000000;text-transform:uppercase;text-decoration:none;font-size:14px;font-style:normal;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;background-color:#000000;border:none;border-radius:none;text-align:center;padding:0px 22px 0px 22px;height:42px;min-width:100px;line-height:21px;text-size-adjust:100%;cursor:pointer"><a href="https://parkcityrestaurants.com/savor-the-summit?gad_source=1&amp;gad_campaignid=21415110910&amp;gbraid=0AAAAA97Lu29d7wCd8dBDhjpJuPez3ESAS&amp;gclid=Cj0KCQjw0LDBBhCnARIsAMpYlArAeNmfJI8Twbr_gyrvdUxAsMe9wy6IFz6x02HhO6WSFz-hicQSKw8aAqDeEALw_wcB&amp;gclsrc=aw.dsEdit%20Text" style="color:#ffffff;text-transform:uppercase;text-decoration:none;font-size:13px;font-style:normal;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:normal" target="_blank"><span style="color:#ffffff;text-transform:uppercase;text-decoration:none;font-size:13px;font-style:normal;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:normal" target="_blank">LEARN MORE</span></a></td></tr></tbody></table></td></tr></tbody></table></span></div></td></tr></tbody></table></td></tr></tbody></table>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+</div>
+<div style="max-width:600px;Margin:0 auto">
+<!--[if (gte mso 9)|(IE)]><table width="600" align="center" cellpadding="0" cellspacing="0"><tr><td><![endif]--><table width="100%" style="border-spacing:0;font-family:sans-serif;Margin:0 auto;width:100%;max-width:600px" cellpadding="0" cellspacing="0"><tbody><tr><td bgcolor="#ffffff" style="padding:0;background-color:#ffffff"><img style="width:100%;border:0;height:35px" height="35" src="https://d2wn0fwevmicfp.cloudfront.net/images/empty.gif" alt=" "></td></tr></tbody></table>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+</div>
+<div style="max-width:600px;Margin:0 auto">
+<!--[if (gte mso 9)|(IE)]><table width="600" align="center" cellpadding="0" cellspacing="0"><tr><td><![endif]--><table width="100%" bgcolor="#eeeeee" style="border-spacing:0;font-family:sans-serif;Margin:0 auto;width:100%;max-width:600px;background-color:#eeeeee" cellpadding="0" cellspacing="0" class="panel-mixed-horizontal-12"><tbody><tr><td style="padding:10px;text-align:center;font-size:0;border-collapse:collapse" class="twoColumnGroup" dir="ltr"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:0">
+<!--[if (gte mso 9)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" dir="ltr"><tr><td width="230" valign="top"><![endif]--><div class="column imgColumn" dir="rtl" style="width:100%;display:inline-block;max-width:230px;vertical-align:top"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:10px;width:100%;max-width:300px;height:auto;mso-line-height-rule:at-least" dir="ltr"><img src="https://sp.activepipe.com/image/121764756/XQZOBF0LAwJXB1dSTFQAAwlOVgNUBRgOBwFVG1AJUwQCW1YMAFFRBA==" style="width:100%;border:0;display:block;border-style:none;max-width:210px" width="210" border="0" alt=""></td></tr></tbody></table></div>
+<!--[if (gte mso 9)|(IE)]></td><td width="350" valign="top"><![endif]--><div class="column" dir="rtl" style="width:100%;display:inline-block;max-width:350px;vertical-align:top"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:10px;width:100%;text-align:left;font-size:14px;word-break:break-word;color:#000000;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;line-height:21px" dir="ltr"><div class="DraftEditor-root"><div class="DraftEditor-editorContainer"><div class="public-DraftEditor-content" contenteditable="false" spellcheck="false" style="outline:none;user-select:text;-webkit-user-select:text;white-space: normal;word-wrap:break-word"><div data-contents="true">
+<div class="" data-block="true" data-editor="462nm" data-offset-key="dq5ki-0-0"><div data-offset-key="dq5ki-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span data-offset-key="dq5ki-0-0" style="text-decoration:underline;font-weight:bold"><span data-text="true">PARK CITY TRAIL SERIES</span></span></div></div>
+<div class="" data-block="true" data-editor="462nm" data-offset-key="3lfss-0-0"><div data-offset-key="3lfss-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span data-offset-key="3lfss-0-0"><span data-text="true">5K - Saturday, June 7 - 8am Start Time</span></span></div></div>
+<div class="" data-block="true" data-editor="462nm" data-offset-key="ch0og-0-0"><div data-offset-key="ch0og-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span data-offset-key="ch0og-0-0"><span data-text="true">10k - Saturday, July 12th  - 8am Start Time</span></span></div></div>
+<div class="" data-block="true" data-editor="462nm" data-offset-key="eq1va-0-0"><div data-offset-key="eq1va-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span data-offset-key="eq1va-0-0"><span data-text="true">Half Marathon - Saturday, August 2nd - 8am Start Time</span></span></div></div>
+<div class="" data-block="true" data-editor="462nm" data-offset-key="6uvqe-0-0"><br></div>
+<div class="" data-block="true" data-editor="462nm" data-offset-key="fnc5h-0-0"><div data-offset-key="fnc5h-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span data-offset-key="fnc5h-0-0"><span data-text="true">Park City Trail Series is a 3-race series that runs from June – August. It starts with a 5K and works up to a half marathon. The courses are great for new trail runners but bring the excitement that seasoned trail runners love. You can mix and match which races you would like to sign up for or get all three at an amazing price! </span></span></div></div>
+<div class="" data-block="true" data-editor="462nm" data-offset-key="57qql-0-0"><br></div>
+<div class="" data-block="true" data-editor="462nm" data-offset-key="agac-0-0"><div data-offset-key="agac-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><a href="https://pctrailseries.com/" style="color:#002349;text-decoration:underline"><span style="color:#002349;text-decoration:underline"><span data-offset-key="agac-0-0"><span data-text="true">CLICK HERE TO REGISTER</span></span></span></a></div></div>
+</div></div></div></div></td></tr></tbody></table></div>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+</td></tr></tbody></table></td></tr></tbody></table>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+</div>
+<div style="max-width:600px;Margin:0 auto">
+<!--[if (gte mso 9)|(IE)]><table width="600" align="center" cellpadding="0" cellspacing="0"><tr><td><![endif]--><table width="100%" bgcolor="#ffffff" style="border-spacing:0;font-family:sans-serif;Margin:0 auto;width:100%;max-width:600px;background-color:#ffffff" cellpadding="0" cellspacing="0" class="panel-mixed-horizontal-13"><tbody><tr><td style="padding:10px;text-align:center;font-size:0;border-collapse:collapse" class="twoColumnGroup" dir="ltr"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:0">
+<!--[if (gte mso 9)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" dir="ltr"><tr><td width="350" valign="top"><![endif]--><div class="column" dir="ltr" style="width:100%;display:inline-block;max-width:350px;vertical-align:top"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:10px;width:100%;text-align:left;font-size:14px;word-break:break-word;color:#000000;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;line-height:21px" dir="ltr"><div class="DraftEditor-root"><div class="DraftEditor-editorContainer"><div class="public-DraftEditor-content" contenteditable="false" spellcheck="false" style="outline:none;user-select:text;-webkit-user-select:text;white-space: normal;word-wrap:break-word"><div data-contents="true">
+<div class="" data-block="true" data-editor="cmm8h" data-offset-key="dq5ki-0-0"><div data-offset-key="dq5ki-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span data-offset-key="dq5ki-0-0" style="font-weight:bold;text-decoration:underline"><span data-text="true">LUNAR LIBATIONS</span></span></div></div>
+<div class="" data-block="true" data-editor="cmm8h" data-offset-key="a5kge-0-0"><div data-offset-key="a5kge-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span data-offset-key="a5kge-0-0"><span data-text="true">Friday, June 20th  |  9:00pm</span></span></div></div>
+<div class="" data-block="true" data-editor="cmm8h" data-offset-key="a8j07-0-0"><div data-offset-key="a8j07-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span data-offset-key="a8j07-0-0"><span data-text="true">Meet at Compass Sports Located in the Pendry Park City</span></span></div></div>
+<div class="" data-block="true" data-editor="cmm8h" data-offset-key="b0o-0-0"><div data-offset-key="b0o-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span data-offset-key="b0o-0-0" style="font-style:italic"><span data-text="true">Reservations are required</span></span></div></div>
+<div class="" data-block="true" data-editor="cmm8h" data-offset-key="n5h8-0-0"><br></div>
+<div class="" data-block="true" data-editor="cmm8h" data-offset-key="7dboj-0-0"><div data-offset-key="7dboj-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span data-offset-key="7dboj-0-0"><span data-text="true">Step into the magic of summer evenings with Lunar Libations—a weekly off-site experience that begins with a twilight guided hike through the mountains followed by a cosmic mocktail class set beneath the stars. Connect with nature, sip something celestial, and soak in the beauty of Park City’s summer skies. </span></span></div></div>
+<div class="" data-block="true" data-editor="cmm8h" data-offset-key="94mvb-0-0"><br></div>
+<div class="" data-block="true" data-editor="cmm8h" data-offset-key="66lkr-0-0"><div style="text-align:left"><div data-offset-key="66lkr-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr">
+<a href="https://www.pendry.com/park-city/experiences/book-an-experience/#!/e/lunar-libations-9c493688" style="color:#002349;text-decoration:underline"><span style="color:#002349;text-decoration:underline"><span data-offset-key="66lkr-0-0"><span data-text="true">B</span></span></span></a><a href="https://www.pendry.com/park-city/experiences/book-an-experience/#!/e/lunar-libations-9c493688" style="color:#002349;text-decoration:underline"><span style="color:#002349;text-decoration:underline"><span data-offset-key="66lkr-1-0"><span data-text="true">OOK YOUR </span></span></span></a><a href="https://www.pendry.com/park-city/experiences/book-an-experience/#!/e/lunar-libations-9c493688" style="color:#002349;text-decoration:underline"><span style="color:#002349;text-decoration:underline"><span data-offset-key="66lkr-2-0"><span data-text="true">RESERVATION HERE</span></span></span></a>
+</div></div></div>
+</div></div></div></div></td></tr></tbody></table></div>
+<!--[if (gte mso 9)|(IE)]></td><td width="230" valign="top"><![endif]--><div class="column imgColumn" dir="ltr" style="width:100%;display:inline-block;max-width:230px;vertical-align:top"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:10px;width:100%;max-width:300px;height:auto;mso-line-height-rule:at-least" dir="ltr"><img src="https://sp.activepipe.com/image/121764809/DwcdDlVRU1ACB1BUHQwBV1NJBAIHVRgOUgABHlxeBwRTWwcHVwBWVQ==" style="width:100%;border:0;display:block;border-style:none;max-width:210px" width="210" border="0" alt=""></td></tr></tbody></table></div>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+</td></tr></tbody></table></td></tr></tbody></table>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+</div>
+<div style="max-width:600px;Margin:0 auto">
+<!--[if (gte mso 9)|(IE)]><table width="600" align="center" cellpadding="0" cellspacing="0"><tr><td><![endif]--><table width="100%" bgcolor="#eeeeee" style="border-spacing:0;font-family:sans-serif;Margin:0 auto;width:100%;max-width:600px;background-color:#eeeeee" cellpadding="0" cellspacing="0" class="panel-mixed-horizontal-14"><tbody><tr><td style="padding:10px;text-align:center;font-size:0;border-collapse:collapse" class="twoColumnGroup" dir="ltr"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:0">
+<!--[if (gte mso 9)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" dir="ltr"><tr><td width="230" valign="top"><![endif]--><div class="column imgColumn" dir="rtl" style="width:100%;display:inline-block;max-width:230px;vertical-align:top"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:10px;width:100%;max-width:300px;height:auto;mso-line-height-rule:at-least" dir="ltr"><img src="https://sp.activepipe.com/image/121764952/XlVAC19SA1AEA1IGH1RSVAMVUANaVRVYUwdXGldeAlYAUVgHDVNUUg==" style="width:100%;border:0;display:block;border-style:none;max-width:210px" width="210" border="0" alt=""></td></tr></tbody></table></div>
+<!--[if (gte mso 9)|(IE)]></td><td width="350" valign="top"><![endif]--><div class="column" dir="rtl" style="width:100%;display:inline-block;max-width:350px;vertical-align:top"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:10px;width:100%;text-align:left;font-size:14px;word-break:break-word;color:#000000;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;line-height:21px" dir="ltr"><div class="DraftEditor-root"><div class="DraftEditor-editorContainer"><div class="public-DraftEditor-content" contenteditable="false" spellcheck="false" style="outline:none;user-select:text;-webkit-user-select:text;white-space: normal;word-wrap:break-word"><div data-contents="true">
+<div class="" data-block="true" data-editor="5j9ma" data-offset-key="dq5ki-0-0"><div style="text-align:left"><div data-offset-key="dq5ki-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span data-offset-key="dq5ki-0-0" style="font-weight:bold;text-decoration:underline"><span data-text="true">RECESS ON MAIN - EDUCATIONAL HAPPY HOUR</span></span></div></div></div>
+<div class="" data-block="true" data-editor="5j9ma" data-offset-key="2qoap-0-0"><div data-offset-key="2qoap-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span data-offset-key="2qoap-0-0"><span data-text="true">Every Friday at 6:15pm</span></span></div></div>
+<div class="" data-block="true" data-editor="5j9ma" data-offset-key="bk0gb-0-0"><div data-offset-key="bk0gb-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span data-offset-key="bk0gb-0-0"><span data-text="true">Treasure Mountain Inn - Crescent Room</span></span></div></div>
+<div class="" data-block="true" data-editor="5j9ma" data-offset-key="cdisc-0-0"><div data-offset-key="cdisc-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span data-offset-key="cdisc-0-0"><span data-text="true">$59 per person  |  Reservations Required</span></span></div></div>
+<div class="" data-block="true" data-editor="5j9ma" data-offset-key="3lp2m-0-0"><br></div>
+<div class="" data-block="true" data-editor="5j9ma" data-offset-key="79s70-0-0"><div data-offset-key="79s70-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span data-offset-key="79s70-0-0"><span data-text="true">Fox School of Wine invites you to a fun-filled, guided wine tasting on Main Street. Wine Professors will present a well-paced tasting of five, approachable, under-$40 hidden gem wines that you may have overlooked in the aisles at your local liquor store.</span></span></div></div>
+<div class="" data-block="true" data-editor="5j9ma" data-offset-key="ac51a-0-0"><br></div>
+<div class="" data-block="true" data-editor="5j9ma" data-offset-key="3vcpb-0-0"><div data-offset-key="3vcpb-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span data-offset-key="3vcpb-0-0" style="font-weight:bold"><span data-text="true">June Schedule</span></span></div></div>
+<div class="" data-block="true" data-editor="5j9ma" data-offset-key="2u4jp-0-0"><div data-offset-key="2u4jp-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr">
+<span data-offset-key="2u4jp-0-0"><span data-text="true">June 6th: </span></span><a href="https://www.eventbrite.com/e/understanding-oak-a-tasting-journey-tickets-1344888651159?aff=oddtdtcreator" style="color:#002349;text-decoration:underline"><span style="color:#002349;text-decoration:underline"><span data-offset-key="2u4jp-1-0"><span data-text="true">Understanding Oak</span></span></span></a>
+</div></div>
+<div class="" data-block="true" data-editor="5j9ma" data-offset-key="9281q-0-0"><div data-offset-key="9281q-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr">
+<span data-offset-key="9281q-0-0"><span data-text="true">June 13th: </span></span><a href="https://www.eventbrite.com/e/debunking-wine-superstitions-tickets-1344891309109?aff=oddtdtcreator" style="color:#002349;text-decoration:underline"><span style="color:#002349;text-decoration:underline"><span data-offset-key="9281q-1-0"><span data-text="true">Debunking Wine Superstition</span></span></span></a>
+</div></div>
+<div class="" data-block="true" data-editor="5j9ma" data-offset-key="2jipb-0-0"><div data-offset-key="2jipb-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr">
+<span data-offset-key="2jipb-0-0"><span data-text="true">June 20th: </span></span><a href="https://www.eventbrite.com/e/day-drinking-done-right-the-rose-edition-tickets-1344893014209?aff=oddtdtcreator" style="color:#002349;text-decoration:underline"><span style="color:#002349;text-decoration:underline"><span data-offset-key="2jipb-1-0"><span data-text="true">Day Drinking Done Right: The Rose Edition</span></span></span></a>
+</div></div>
+<div class="" data-block="true" data-editor="5j9ma" data-offset-key="ct9ic-0-0"><div data-offset-key="ct9ic-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr">
+<span data-offset-key="ct9ic-0-0"><span data-text="true">June 27th: </span></span><a href="https://www.eventbrite.com/e/day-drinking-done-right-the-brunch-edition-tickets-1344898711249?aff=oddtdtcreator" style="color:#002349;text-decoration:underline"><span style="color:#002349;text-decoration:underline"><span data-offset-key="ct9ic-1-0"><span data-text="true">Day Drinking Done Right: The Brunch Edition</span></span></span></a>
+</div></div>
+</div></div></div></div></td></tr></tbody></table></div>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+</td></tr></tbody></table></td></tr></tbody></table>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+</div>
+<div style="max-width:600px;Margin:0 auto">
+<!--[if (gte mso 9)|(IE)]><table width="600" align="center" cellpadding="0" cellspacing="0"><tr><td><![endif]--><table width="100%" bgcolor="#ffffff" style="border-spacing:0;font-family:sans-serif;Margin:0 auto;width:100%;max-width:600px;background-color:#ffffff" cellpadding="0" cellspacing="0" class="panel-mixed-horizontal-15"><tbody><tr><td style="padding:10px;text-align:center;font-size:0;border-collapse:collapse" class="twoColumnGroup" dir="ltr"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:0">
+<!--[if (gte mso 9)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" dir="ltr"><tr><td width="350" valign="top"><![endif]--><div class="column" dir="ltr" style="width:100%;display:inline-block;max-width:350px;vertical-align:top"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:10px;width:100%;text-align:left;font-size:14px;word-break:break-word;color:#000000;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;line-height:21px" dir="ltr"><div class="DraftEditor-root"><div class="DraftEditor-editorContainer"><div class="public-DraftEditor-content" contenteditable="false" spellcheck="false" style="outline:none;user-select:text;-webkit-user-select:text;white-space: normal;word-wrap:break-word"><div data-contents="true">
+<div class="" data-block="true" data-editor="fi76h" data-offset-key="dq5ki-0-0"><div data-offset-key="dq5ki-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span data-offset-key="dq5ki-0-0" style="font-weight:bold;text-decoration:underline"><span data-text="true">LAST FRIDAY ART GALLERY STROLL</span></span></div></div>
+<div class="" data-block="true" data-editor="fi76h" data-offset-key="af6bp-0-0"><div data-offset-key="af6bp-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span data-offset-key="af6bp-0-0"><span data-text="true">Friday, June 27th  |  6:00pm - 9:00pm</span></span></div></div>
+<div class="" data-block="true" data-editor="fi76h" data-offset-key="fm3lg-0-0"><div data-offset-key="fm3lg-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span data-offset-key="fm3lg-0-0"><span data-text="true">Park City Historic Main Street</span></span></div></div>
+<div class="" data-block="true" data-editor="fi76h" data-offset-key="43s0a-0-0"><br></div>
+<div class="" data-block="true" data-editor="fi76h" data-offset-key="ffpo-0-0"><div data-offset-key="ffpo-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span data-offset-key="ffpo-0-0"><span data-text="true">The Last Friday Gallery Stroll, hosted by the Park City Gallery Association, is a free monthly event where 19 local galleries open their doors, inviting visitors to enjoy light refreshments and explore new exhibits from local, national, and international artists. It’s a great way to experience Park City's vibrant art scene while strolling along scenic Historic Main Street.</span></span></div></div>
+<div class="" data-block="true" data-editor="fi76h" data-offset-key="6mte2-0-0"><br></div>
+<div class="" data-block="true" data-editor="fi76h" data-offset-key="7dc06-0-0"><div data-offset-key="7dc06-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><a href="https://parkcitygalleryassociation.com/gallery-strolls/" style="color:#002349;text-decoration:underline"><span style="color:#002349;text-decoration:underline"><span data-offset-key="7dc06-0-0"><span data-text="true">VIEW MAP AND LIST OF GALLERIES HERE</span></span></span></a></div></div>
+</div></div></div></div></td></tr></tbody></table></div>
+<!--[if (gte mso 9)|(IE)]></td><td width="230" valign="top"><![endif]--><div class="column imgColumn" dir="ltr" style="width:100%;display:inline-block;max-width:230px;vertical-align:top"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:10px;width:100%;max-width:300px;height:auto;mso-line-height-rule:at-least" dir="ltr"><img src="https://sp.activepipe.com/image/121214666/W1dKDVIKBAAJUwlXFFUFUQBIVgUCARQOV1IAGQYJUwVWClEABg1TUw==" style="width:100%;border:0;display:block;border-style:none;max-width:210px" width="210" border="0" alt=""></td></tr></tbody></table></div>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+</td></tr></tbody></table></td></tr></tbody></table>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+</div>
+<div style="max-width:600px;Margin:0 auto">
+<!--[if (gte mso 9)|(IE)]><table width="600" align="center" cellpadding="0" cellspacing="0"><tr><td><![endif]--><table width="100%" bgcolor="#ffffff" style="border-spacing:0;font-family:sans-serif;Margin:0 auto;width:100%;max-width:600px;background-color:#ffffff" cellpadding="0" cellspacing="0"><tbody>
+<tr><td style="padding:0" colspan="3"><img style="width:100%;border:0;display:block;Margin:0 auto;height:20px" height="20" src="https://d2wn0fwevmicfp.cloudfront.net/images/empty.gif" alt=" "></td></tr>
+<tr>
+<td style="padding:0;font-size:1px;line-height:1px" width="20%" height="1"><img style="width:100%;border:0;display:block;Margin:0 auto;height:1px" height="1" src="https://d2wn0fwevmicfp.cloudfront.net/images/empty.gif" alt=" "></td>
+<td style="padding:0;background-color:#aaacab;font-size:1px;line-height:1px" bgcolor="#aaacab" height="1" width="60%"><img style="width:100%;border:0;display:block;Margin:0 auto;height:1px" height="1" src="https://d2wn0fwevmicfp.cloudfront.net/images/empty.gif" alt=" "></td>
+<td style="padding:0;font-size:1px;line-height:1px" width="20%" height="1"><img style="width:100%;border:0;display:block;Margin:0 auto;height:1px" height="1" src="https://d2wn0fwevmicfp.cloudfront.net/images/empty.gif" alt=" "></td>
+</tr>
+<tr><td style="padding:0" colspan="3"><img style="width:100%;border:0;display:block;Margin:0 auto;height:20px" height="20" src="https://d2wn0fwevmicfp.cloudfront.net/images/empty.gif" alt=" "></td></tr>
+</tbody></table>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+</div>
+<div style="max-width:600px;Margin:0 auto">
+<!--[if (gte mso 9)|(IE)]><table width="600" align="center" cellpadding="0" cellspacing="0"><tr><td><![endif]--><table width="100%" style="border-spacing:0;font-family:sans-serif;Margin:0 auto;width:100%;max-width:600px" cellpadding="0" cellspacing="0" class="panel-image-17"><tbody><tr><td style="padding:0;text-align:center;font-size:0" class="oneColumnGroup"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:0"><div class="column" style="width:100%;display:inline-block;vertical-align:top;max-width:600px"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:0;width:100%;text-align:left;font-size:14px;color:#000000;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;line-height:21px;mso-line-height-rule:at-least"><img src="https://sp.activepipe.com/image/113906414/WwNOXlMPUVsEVFADTgEKUAsUB1YGDxxcAlNeTwNaUARVAgUAAF1WDw==" style="width:100%;border:0;display:block;border-style:none;max-width:600px" width="600" border="0" alt=""></td></tr></tbody></table></div></td></tr></tbody></table></td></tr></tbody></table>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+</div>
+<div style="max-width:600px;Margin:0 auto">
+<!--[if (gte mso 9)|(IE)]><table width="600" align="center" cellpadding="0" cellspacing="0"><tr><td><![endif]--><table width="100%" style="border-spacing:0;font-family:sans-serif;Margin:0 auto;width:100%;max-width:600px;background-color:#ffffff" cellpadding="0" cellspacing="0" class="panel-property-list"><tbody><tr><td style="padding:10px;text-align:center;font-size:0;border-collapse:collapse" class="twoColumnGroup" dir="ltr"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td bgcolor="#eeeeee" style="padding:0;background-color:#eeeeee"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody>
+<tr><td style="padding:0">
+<table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td class="" style="padding:0">
+<!--[if (gte mso 9)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" dir="ltr"><tr><td width="230" valign="top"><![endif]--><div style="width:100%;max-width:230px;display:inline-block;vertical-align:top" class="column imageColumn" dir="rtl"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:10px" class="resetMaxWidth"><a href="https://sheilahall.sothebysrealty.com/id/2071706" style="border-style:none"> <img src="https://sp.activepipe.com/property_image/14890923134/WlBADQBUVFMJVFUDHwRVD1YeAABcVxQGAQMPGgMABVIJBw5RDVBWBR8PQQBVEU4KVAUaBA5QD1JSVAEBA1AAUAITQA0JQ0JcAFUHUxwBAAFUBQIEDlAPUlJVEV8IXgZWF0dODQ1XBUdDDQxWAwI=" style="width:100%;border:0;display:block;border-style:none" width="210" border="0" alt=""> </a></td></tr></tbody></table></div>
+<!--[if (gte mso 9)|(IE)]></td><td width="350" valign="top"><![endif]--><div style="width:100%;max-width:350px;display:inline-block;vertical-align:top" class="column textColumn" dir="rtl"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:10px" dir="ltr"><table width="100%" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:sans-serif"><tbody><tr><td style="padding:0;text-align:left"><table width="100%" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:sans-serif"><tbody>
+<tr><td style="padding:10px 0px 0px 0px;padding-top:0px"><a href="https://sheilahall.sothebysrealty.com/id/2071706" style="color:#000000;text-decoration:none;font-size:16px;font-style:normal;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400"><span style="text-decoration:none;color:#000000;font-size:16px;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;font-style:normal;line-height:20px"><span>Cormont at Deer Valley</span></span></a></td></tr>
+<tr><td style="padding:10px 0px 0px 0px;vertical-align:top;height:36px;padding-top:5px"><p style="Margin:0;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-size:14px;color:#999999;line-height:18px;font-weight:400"><a href="https://sheilahall.sothebysrealty.com/id/2071706" style="color:#999999;text-decoration:none;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400"><span style="text-decoration:none;color:#999999;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400"><span>1601 West Glencoe Mountain Way, Unit 5701</span></span></a><a href="https://sheilahall.sothebysrealty.com/id/2071706" style="color:#999999;text-decoration:none;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400"><span style="text-decoration:none;color:#999999;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400">, </span></a><a href="https://sheilahall.sothebysrealty.com/id/2071706" style="color:#999999;text-decoration:none;font-size:14px;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400"><span style="text-decoration:none;color:#999999;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;font-size:14px;line-height:18px"><span>Park City</span></span></a></p></td></tr>
+<tr><td style="padding:15px 0px 5px;text-align:left;vertical-align:bottom;white-space:nowrap"><table style="border-spacing:0;font-family:sans-serif;display:inline-block" cellpadding="0" cellspacing="0"><tbody><tr>
+<td style="padding:0;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-size:14px;color:#000000;line-height:21px;font-weight:400;white-space:nowrap;text-align:center" valign="middle">
+<span style="vertical-align:middle;Margin-right:20px;font-size:21px;line-height:10px;color:#999999"><span>3</span></span><br><span style="font-size:9px;Margin-right:20px;line-height:9px;color:#999999;text-transform:uppercase">Bedrooms</span>
+</td>
+<td><img width="5" src="https://d2wn0fwevmicfp.cloudfront.net/images/empty.gif" alt=" "></td>
+<td style="padding:0;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-size:14px;color:#000000;line-height:21px;font-weight:400;white-space:nowrap;text-align:center" valign="middle">
+<span style="vertical-align:middle;Margin-right:20px;font-size:21px;line-height:10px;color:#999999"><span>4</span></span><br><span style="font-size:9px;Margin-right:20px;line-height:9px;color:#999999;text-transform:uppercase">Bathrooms</span>
+</td>
+</tr></tbody></table></td></tr>
+<tr><td style="padding:10px 0px 0px 0px;vertical-align:bottom"><p style="Margin:0;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-size:16px;color:#917036;line-height:20px;font-weight:400;font-style:normal"><span>$7,137,500</span></p></td></tr>
+<tr><td style="padding:10px 0px 0px 0px"><a href="https://managemypreferences.com/inspection-request/new?token=nqkqofi3a4nvsqs3lmnqog2zijnvwgyda4bqoaapaydacgyvafkambqpkikwu-nqdbwwkclnnrwflzoykrwaifaahq4gyeaehaag2zijnvwg2zijnvwgyhdnmuew23dmkqofi3a4nvsqs3lmnvsqs3lmnvsqs3lmnvsqs3lmnvsqs3lmnvsqs3lmnqgbyda4aa6bqgaenvsqs3lmnugrkckinvsqs3lmnvsqs3lmnrkakuayda6uqvni" style="display:block;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-size:14px;color:#000000;line-height:21px;font-weight:400">Request A Private Showing</a></td></tr>
+</tbody></table></td></tr></tbody></table></td></tr></tbody></table></div>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+</td></tr></tbody></table>
+<div bgcolor="#ffffff" style="padding:0;background-color:#ffffff"><img style="width:100%;border:0;height:10px" height="10" src="https://d2wn0fwevmicfp.cloudfront.net/images/empty.gif" alt=" "></div>
+</td></tr>
+<tr><td style="padding:0">
+<table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td class="" style="padding:0">
+<!--[if (gte mso 9)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" dir="ltr"><tr><td width="230" valign="top"><![endif]--><div style="width:100%;max-width:230px;display:inline-block;vertical-align:top" class="column imageColumn" dir="rtl"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:10px" class="resetMaxWidth"><a href="https://sheilahall.sothebysrealty.com/id/2067589" style="border-style:none"> <img src="https://sp.activepipe.com/property_image/14814109863/XAMcDwVcAgAHVgNcTlBbBwFIVQBQAx0JVgZTTwJSUlUGAlZQVwBXBBldRwAEFBtfVFNPBAMHBgZTVFNUAgYCVQRAHA8CQkMMBgcBU00EVVRUU1cEAwcGBlNVQwoJCARTERQSDwZWBBdFXwpWUgc=" style="width:100%;border:0;display:block;border-style:none" width="210" border="0" alt=""> </a></td></tr></tbody></table></div>
+<!--[if (gte mso 9)|(IE)]></td><td width="350" valign="top"><![endif]--><div style="width:100%;max-width:350px;display:inline-block;vertical-align:top" class="column textColumn" dir="rtl"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:10px" dir="ltr"><table width="100%" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:sans-serif"><tbody><tr><td style="padding:0;text-align:left"><table width="100%" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:sans-serif"><tbody>
+<tr><td style="padding:10px 0px 0px 0px;padding-top:0px"><a href="https://sheilahall.sothebysrealty.com/id/2067589" style="color:#000000;text-decoration:none;font-size:16px;font-style:normal;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400"><span style="text-decoration:none;color:#000000;font-size:16px;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;font-style:normal;line-height:20px"><span>Four Seasons Deer Valley Residences</span></span></a></td></tr>
+<tr><td style="padding:10px 0px 0px 0px;vertical-align:top;height:36px;padding-top:5px"><p style="Margin:0;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-size:14px;color:#999999;line-height:18px;font-weight:400"><a href="https://sheilahall.sothebysrealty.com/id/2067589" style="color:#999999;text-decoration:none;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400"><span style="text-decoration:none;color:#999999;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400"><span>1707 West Glencoe Mountain Way, Unit 7G</span></span></a><a href="https://sheilahall.sothebysrealty.com/id/2067589" style="color:#999999;text-decoration:none;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400"><span style="text-decoration:none;color:#999999;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400">, </span></a><a href="https://sheilahall.sothebysrealty.com/id/2067589" style="color:#999999;text-decoration:none;font-size:14px;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400"><span style="text-decoration:none;color:#999999;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;font-size:14px;line-height:18px"><span>Park City</span></span></a></p></td></tr>
+<tr><td style="padding:15px 0px 5px;text-align:left;vertical-align:bottom;white-space:nowrap"><table style="border-spacing:0;font-family:sans-serif;display:inline-block" cellpadding="0" cellspacing="0"><tbody><tr>
+<td style="padding:0;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-size:14px;color:#000000;line-height:21px;font-weight:400;white-space:nowrap;text-align:center" valign="middle">
+<span style="vertical-align:middle;Margin-right:20px;font-size:21px;line-height:10px;color:#999999"><span>4</span></span><br><span style="font-size:9px;Margin-right:20px;line-height:9px;color:#999999;text-transform:uppercase">Bedrooms</span>
+</td>
+<td><img width="5" src="https://d2wn0fwevmicfp.cloudfront.net/images/empty.gif" alt=" "></td>
+<td style="padding:0;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-size:14px;color:#000000;line-height:21px;font-weight:400;white-space:nowrap;text-align:center" valign="middle">
+<span style="vertical-align:middle;Margin-right:20px;font-size:21px;line-height:10px;color:#999999"><span>5</span></span><br><span style="font-size:9px;Margin-right:20px;line-height:9px;color:#999999;text-transform:uppercase">Bathrooms</span>
+</td>
+</tr></tbody></table></td></tr>
+<tr><td style="padding:10px 0px 0px 0px;vertical-align:bottom"><p style="Margin:0;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-size:16px;color:#917036;line-height:20px;font-weight:400;font-style:normal"><span>$11,550,000</span></p></td></tr>
+<tr><td style="padding:10px 0px 0px 0px"><a href="https://managemypreferences.com/inspection-request/new?token=nqkqofi3a4nvsqs3lmnqog2zijnvwgyda4dq4bygaeda4gyvafkambqpkikwu-nqdbwwkclnnrwflzoykrwaifaahq4gyeaehaag2zijnvwg2zijnvwgyhdnmuew23dmkqofi3a4nvsqs3lmnvsqs3lmnvsqs3lmnvsqs3lmnvsqs3lmnvsqs3lmnqgbyhbydqmaigbynvsqs3lmnugrkckinvsqs3lmnvsqs3lmnrkakuayda6uqvni" style="display:block;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-size:14px;color:#000000;line-height:21px;font-weight:400">Request A Private Showing</a></td></tr>
+</tbody></table></td></tr></tbody></table></td></tr></tbody></table></div>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+</td></tr></tbody></table>
+<div bgcolor="#ffffff" style="padding:0;background-color:#ffffff"><img style="width:100%;border:0;height:10px" height="10" src="https://d2wn0fwevmicfp.cloudfront.net/images/empty.gif" alt=" "></div>
+</td></tr>
+<tr><td style="padding:0"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td class="" style="padding:0">
+<!--[if (gte mso 9)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" dir="ltr"><tr><td width="230" valign="top"><![endif]--><div style="width:100%;max-width:230px;display:inline-block;vertical-align:top" class="column imageColumn" dir="rtl"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:10px" class="resetMaxWidth"><a href="https://sheilahall.sothebysrealty.com/id/2065768" style="border-style:none"> <img src="https://sp.activepipe.com/property_image/14641087225/UgdBWABZBwQHVwZbTgIIBwgfUAcDARwMCQsAFAUDUg4JWw0GAVBTUhsJElwEQkhZDwRKVwIFBwIODgAPUAMAAApEQVhTRxQJBFNUD01SBlIPBFJXAgUHAg4PEFFbDQYGHxBPWFdTUxJHC18KUlE=" style="width:100%;border:0;display:block;border-style:none" width="210" border="0" alt=""> </a></td></tr></tbody></table></div>
+<!--[if (gte mso 9)|(IE)]></td><td width="350" valign="top"><![endif]--><div style="width:100%;max-width:350px;display:inline-block;vertical-align:top" class="column textColumn" dir="rtl"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:10px" dir="ltr"><table width="100%" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:sans-serif"><tbody><tr><td style="padding:0;text-align:left"><table width="100%" cellpadding="0" cellspacing="0" style="border-spacing:0;font-family:sans-serif"><tbody>
+<tr><td style="padding:10px 0px 0px 0px;padding-top:0px"><a href="https://sheilahall.sothebysrealty.com/id/2065768" style="color:#000000;text-decoration:none;font-size:16px;font-style:normal;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400"><span style="text-decoration:none;color:#000000;font-size:16px;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;font-style:normal;line-height:20px"><span>Steps To The Jordanelle Gondola - Move In Ready</span></span></a></td></tr>
+<tr><td style="padding:10px 0px 0px 0px;vertical-align:top;height:36px;padding-top:5px"><p style="Margin:0;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-size:14px;color:#999999;line-height:18px;font-weight:400"><a href="https://sheilahall.sothebysrealty.com/id/2065768" style="color:#999999;text-decoration:none;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400"><span style="text-decoration:none;color:#999999;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400"><span>2303 Deer Hollow Road, Unit 2316 </span></span></a><a href="https://sheilahall.sothebysrealty.com/id/2065768" style="color:#999999;text-decoration:none;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400"><span style="text-decoration:none;color:#999999;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400">, </span></a><a href="https://sheilahall.sothebysrealty.com/id/2065768" style="color:#999999;text-decoration:none;font-size:14px;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400"><span style="text-decoration:none;color:#999999;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;font-size:14px;line-height:18px"><span>Park City</span></span></a></p></td></tr>
+<tr><td style="padding:15px 0px 5px;text-align:left;vertical-align:bottom;white-space:nowrap"><table style="border-spacing:0;font-family:sans-serif;display:inline-block" cellpadding="0" cellspacing="0"><tbody><tr>
+<td style="padding:0;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-size:14px;color:#000000;line-height:21px;font-weight:400;white-space:nowrap;text-align:center" valign="middle">
+<span style="vertical-align:middle;Margin-right:20px;font-size:21px;line-height:10px;color:#999999"><span>-</span></span><br><span style="font-size:9px;Margin-right:20px;line-height:9px;color:#999999;text-transform:uppercase">Bedrooms</span>
+</td>
+<td><img width="5" src="https://d2wn0fwevmicfp.cloudfront.net/images/empty.gif" alt=" "></td>
+<td style="padding:0;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-size:14px;color:#000000;line-height:21px;font-weight:400;white-space:nowrap;text-align:center" valign="middle">
+<span style="vertical-align:middle;Margin-right:20px;font-size:21px;line-height:10px;color:#999999"><span>1</span></span><br><span style="font-size:9px;Margin-right:20px;line-height:9px;color:#999999;text-transform:uppercase">Bathrooms</span>
+</td>
+</tr></tbody></table></td></tr>
+<tr><td style="padding:10px 0px 0px 0px;vertical-align:bottom"><p style="Margin:0;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-size:16px;color:#917036;line-height:20px;font-weight:400;font-style:normal"><span>$530,000</span></p></td></tr>
+<tr><td style="padding:10px 0px 0px 0px"><a href="https://managemypreferences.com/inspection-request/new?token=nqkqofi3a4nvsqs3lmnqog2zijnvwgyebybqibypbyca6gyvafkambqpkikwu-nqdbwwkclnnrwflzoykrwaifaahq4gyeaehaag2zijnvwg2zijnvwgyhdnmuew23dmkqofi3a4nvsqs3lmnvsqs3lmnvsqs3lmnvsqs3lmnvsqs3lmnvsqs3lmnqidqdaqdq6dqeb4nvsqs3lmnugrkckinvsqs3lmnvsqs3lmnrkakuayda6uqvni" style="display:block;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-size:14px;color:#000000;line-height:21px;font-weight:400">Request A Private Showing</a></td></tr>
+</tbody></table></td></tr></tbody></table></td></tr></tbody></table></div>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+</td></tr></tbody></table></td></tr>
+</tbody></table></td></tr></tbody></table></td></tr></tbody></table>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+</div>
+<div style="max-width:600px;Margin:0 auto">
+<!--[if (gte mso 9)|(IE)]><table width="600" align="center" cellpadding="0" cellspacing="0"><tr><td><![endif]--><table width="100%" bgcolor="#ffffff" style="border-spacing:0;font-family:sans-serif;Margin:0 auto;width:100%;max-width:600px;background-color:#ffffff" cellpadding="0" cellspacing="0"><tbody>
+<tr><td style="padding:0" colspan="3"><img style="width:100%;border:0;display:block;Margin:0 auto;height:20px" height="20" src="https://d2wn0fwevmicfp.cloudfront.net/images/empty.gif" alt=" "></td></tr>
+<tr>
+<td style="padding:0;font-size:1px;line-height:1px" width="20%" height="1"><img style="width:100%;border:0;display:block;Margin:0 auto;height:1px" height="1" src="https://d2wn0fwevmicfp.cloudfront.net/images/empty.gif" alt=" "></td>
+<td style="padding:0;background-color:#aaacab;font-size:1px;line-height:1px" bgcolor="#aaacab" height="1" width="60%"><img style="width:100%;border:0;display:block;Margin:0 auto;height:1px" height="1" src="https://d2wn0fwevmicfp.cloudfront.net/images/empty.gif" alt=" "></td>
+<td style="padding:0;font-size:1px;line-height:1px" width="20%" height="1"><img style="width:100%;border:0;display:block;Margin:0 auto;height:1px" height="1" src="https://d2wn0fwevmicfp.cloudfront.net/images/empty.gif" alt=" "></td>
+</tr>
+<tr><td style="padding:0" colspan="3"><img style="width:100%;border:0;display:block;Margin:0 auto;height:20px" height="20" src="https://d2wn0fwevmicfp.cloudfront.net/images/empty.gif" alt=" "></td></tr>
+</tbody></table>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+</div>
+<div style="max-width:600px;Margin:0 auto">
+<!--[if (gte mso 9)|(IE)]><table width="600" align="center" cellpadding="0" cellspacing="0"><tr><td><![endif]--><table width="100%" style="border-spacing:0;font-family:sans-serif;Margin:0 auto;width:100%;max-width:600px" cellpadding="0" cellspacing="0" class="panel-image-20"><tbody><tr><td style="padding:0;text-align:center;font-size:0" class="oneColumnGroup"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:0"><div class="column" style="width:100%;display:inline-block;vertical-align:top;max-width:600px"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:0;width:100%;text-align:left;font-size:14px;color:#000000;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;line-height:21px;mso-line-height-rule:at-least"><img src="https://sp.activepipe.com/image/113594782/DV1JDgNaAlIBB1BXGQJVVFAaDVJWAB0MAQkJS1MBWwVRCgIKXFtaUw==" style="width:100%;border:0;display:block;border-style:none;max-width:600px" width="600" border="0" alt=""></td></tr></tbody></table></div></td></tr></tbody></table></td></tr></tbody></table>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+</div>
+<div style="max-width:600px;Margin:0 auto">
+<!--[if (gte mso 9)|(IE)]><table width="600" align="center" cellpadding="0" cellspacing="0"><tr><td><![endif]--><table width="100%" style="border-spacing:0;font-family:sans-serif;Margin:0 auto;width:100%;max-width:600px" cellpadding="0" cellspacing="0"><tbody><tr><td bgcolor="#ffffff" style="padding:0;background-color:#ffffff"><div style="width:100%;display:inline-block;vertical-align:top" class="column"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td bgcolor="#ffffff" style="padding:10px;width:100%;text-align:left;font-size:14px;color:#000000;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;line-height:21px;background-color:#ffffff"><a href="https://youtu.be/hGFZe8uLRVI" style="border-style:none"><img src="https://sp.activepipe.com/videos/l6g8m1dqx6h87851c9/thumbnail.png?encoded_url=l6hxvtgdxvb5phc4jqhr52sxqk31p2cj4k85phAxvklry4g0c3cqm5cjl671vksrmqh17n64lc7r4" style="display:block;width:100%;border:0;border-style:none" width="580" border="0" alt=""></a></td></tr></tbody></table></div></td></tr></tbody></table>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+</div>
+<div style="max-width:600px;Margin:0 auto">
+<!--[if (gte mso 9)|(IE)]><table width="600" align="center" cellpadding="0" cellspacing="0"><tr><td><![endif]--><table width="100%" bgcolor="#ffffff" style="border-spacing:0;font-family:sans-serif;Margin:0 auto;width:100%;max-width:600px;background-color:#ffffff" cellpadding="0" cellspacing="0"><tbody>
+<tr><td style="padding:0" colspan="3"><img style="width:100%;border:0;display:block;Margin:0 auto;height:20px" height="20" src="https://d2wn0fwevmicfp.cloudfront.net/images/empty.gif" alt=" "></td></tr>
+<tr>
+<td style="padding:0;font-size:1px;line-height:1px" width="15%" height="1"><img style="width:100%;border:0;display:block;Margin:0 auto;height:1px" height="1" src="https://d2wn0fwevmicfp.cloudfront.net/images/empty.gif" alt=" "></td>
+<td style="padding:0;background-color:#aaacab;font-size:1px;line-height:1px" bgcolor="#aaacab" height="1" width="70%"><img style="width:100%;border:0;display:block;Margin:0 auto;height:1px" height="1" src="https://d2wn0fwevmicfp.cloudfront.net/images/empty.gif" alt=" "></td>
+<td style="padding:0;font-size:1px;line-height:1px" width="15%" height="1"><img style="width:100%;border:0;display:block;Margin:0 auto;height:1px" height="1" src="https://d2wn0fwevmicfp.cloudfront.net/images/empty.gif" alt=" "></td>
+</tr>
+<tr><td style="padding:0" colspan="3"><img style="width:100%;border:0;display:block;Margin:0 auto;height:20px" height="20" src="https://d2wn0fwevmicfp.cloudfront.net/images/empty.gif" alt=" "></td></tr>
+</tbody></table>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+</div>
+<div style="max-width:600px;Margin:0 auto">
+<!--[if (gte mso 9)|(IE)]><table width="600" align="center" cellpadding="0" cellspacing="0"><tr><td><![endif]--><table width="100%" style="border-spacing:0;font-family:sans-serif;Margin:0 auto;width:100%;max-width:600px" cellpadding="0" cellspacing="0" class="panel-image-23"><tbody><tr><td style="padding:0;text-align:center;font-size:0" class="oneColumnGroup"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:0"><div class="column" style="width:100%;display:inline-block;vertical-align:top;max-width:600px"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:0;width:100%;text-align:left;font-size:14px;color:#000000;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;line-height:21px;mso-line-height-rule:at-least"><img src="https://sp.activepipe.com/image/113594860/CFVLWAcBAAgCBVRSTFEIBVZODQQNARoLUQcITABcVgVRU1NRUAhXAQ==" style="width:100%;border:0;display:block;border-style:none;max-width:600px" width="600" border="0" alt=""></td></tr></tbody></table></div></td></tr></tbody></table></td></tr></tbody></table>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+</div>
+<div style="max-width:600px;Margin:0 auto;background-color:#ffffff">
+<!--[if (gte mso 9)|(IE)]><table width="600" align="center" cellpadding="0" cellspacing="0"><tr><td><![endif]--><table width="100%" style="border-spacing:0;font-family:sans-serif;table-layout:fixed;Margin:0 auto;width:100%;max-width:600px" cellpadding="0" cellspacing="0" class="panel-text"><tbody><tr><td bgcolor="#ffffff" style="padding:10px;text-align:center;font-size:0;border-collapse:collapse" class="twoColumnGroup"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:0">
+<!--[if (gte mso 9)|(IE)]><table width="100%" cellpadding="0" cellspacing="0"><tr><td width="290" valign="top"><![endif]--><div style="width:100%;display:inline-block;vertical-align:top;max-width:290px" class="column"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:10px;width:100%;text-align:left;font-size:14px;word-break:break-word;color:#000000;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;line-height:21px"><div class="DraftEditor-root"><div class="DraftEditor-editorContainer"><div class="public-DraftEditor-content" contenteditable="false" spellcheck="false" style="outline:none;user-select:text;-webkit-user-select:text;white-space: normal;word-wrap:break-word"><div data-contents="true">
+<div class="" data-block="true" data-editor="5dncn" data-offset-key="e040p-0-0"><div style="text-align:right"><div data-offset-key="e040p-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><a href="http://google.com" style="color:#002349;text-decoration:underline"><span style="color:#002349;text-decoration:underline"><span data-offset-key="e040p-0-0"><span data-text="true">Aspen</span></span></span></a></div></div></div>
+<div class="" data-block="true" data-editor="5dncn" data-offset-key="f3aag-0-0"><div style="text-align:right"><div data-offset-key="f3aag-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><a href="http://google.com" style="color:#002349;text-decoration:underline"><span style="color:#002349;text-decoration:underline"><span data-offset-key="f3aag-0-0"><span data-text="true">Atlanta</span></span></span></a></div></div></div>
+<div class="" data-block="true" data-editor="5dncn" data-offset-key="bh0uu-0-0"><div style="text-align:right"><div data-offset-key="bh0uu-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr">
+<a href="http://google.com" style="color:#002349;text-decoration:underline"><span style="color:#002349;text-decoration:underline"><span data-offset-key="bh0uu-0-0"><span data-text="true">Chicago</span></span></span></a><span data-offset-key="bh0uu-1-0"><span data-text="true"> </span></span>
+</div></div></div>
+<div class="" data-block="true" data-editor="5dncn" data-offset-key="6vv8v-0-0"><div style="text-align:right"><div data-offset-key="6vv8v-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><a href="http://google.com" style="color:#002349;text-decoration:underline"><span style="color:#002349;text-decoration:underline"><span data-offset-key="6vv8v-0-0"><span data-text="true">Dallas</span></span></span></a></div></div></div>
+<div class="" data-block="true" data-editor="5dncn" data-offset-key="ca8tk-0-0"><div style="text-align:right"><div data-offset-key="ca8tk-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><a href="http://google.com" style="color:#002349;text-decoration:underline"><span style="color:#002349;text-decoration:underline"><span data-offset-key="ca8tk-0-0"><span data-text="true">Denver</span></span></span></a></div></div></div>
+<div class="" data-block="true" data-editor="5dncn" data-offset-key="a6uba-0-0"><div style="text-align:right"><div data-offset-key="a6uba-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><a href="http://google.com" style="color:#002349;text-decoration:underline"><span style="color:#002349;text-decoration:underline"><span data-offset-key="a6uba-0-0"><span data-text="true">East Bay</span></span></span></a></div></div></div>
+<div class="" data-block="true" data-editor="5dncn" data-offset-key="3knua-0-0"><div style="text-align:right"><div data-offset-key="3knua-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr">
+<a href="http://google.com" style="color:#002349;text-decoration:underline"><span style="color:#002349;text-decoration:underline"><span data-offset-key="3knua-0-0"><span data-text="true">Greenwich</span></span></span></a><span data-offset-key="3knua-1-0"><span data-text="true"> </span></span>
+</div></div></div>
+<div class="" data-block="true" data-editor="5dncn" data-offset-key="2h035-0-0"><div style="text-align:right"><div data-offset-key="2h035-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><a href="http://google.com" style="color:#002349;text-decoration:underline"><span style="color:#002349;text-decoration:underline"><span data-offset-key="2h035-0-0"><span data-text="true">Houston</span></span></span></a></div></div></div>
+<div class="" data-block="true" data-editor="5dncn" data-offset-key="7oaek-0-0"><div style="text-align:right"><div data-offset-key="7oaek-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><a href="http://google.com" style="color:#002349;text-decoration:underline"><span style="color:#002349;text-decoration:underline"><span data-offset-key="7oaek-0-0"><span data-text="true">Los Angles</span></span></span></a></div></div></div>
+<div class="" data-block="true" data-editor="5dncn" data-offset-key="9bjh7-0-0"><div style="text-align:right"><div data-offset-key="9bjh7-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr">
+<a href="http://google.com" style="color:#002349;text-decoration:underline"><span style="color:#002349;text-decoration:underline"><span data-offset-key="9bjh7-0-0"><span data-text="true">Miami</span></span></span></a><span data-offset-key="9bjh7-1-0"><span data-text="true"> </span></span>
+</div></div></div>
+<div class="" data-block="true" data-editor="5dncn" data-offset-key="e4ieg-0-0"><div style="text-align:right"><div data-offset-key="e4ieg-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><a href="http://google.com" style="color:#002349;text-decoration:underline"><span style="color:#002349;text-decoration:underline"><span data-offset-key="e4ieg-0-0"><span data-text="true">New York</span></span></span></a></div></div></div>
+<div class="" data-block="true" data-editor="5dncn" data-offset-key="4msiv-0-0"><div style="text-align:right"><div data-offset-key="4msiv-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><a href="http://google.com" style="color:#002349;text-decoration:underline"><span style="color:#002349;text-decoration:underline"><span data-offset-key="4msiv-0-0"><span data-text="true">Raleigh</span></span></span></a></div></div></div>
+<div class="" data-block="true" data-editor="5dncn" data-offset-key="403p-0-0"><div style="text-align:right"><div data-offset-key="403p-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><a href="http://google.com" style="color:#002349;text-decoration:underline"><span style="color:#002349;text-decoration:underline"><span data-offset-key="403p-0-0"><span data-text="true">Sacramento</span></span></span></a></div></div></div>
+</div></div></div></div></td></tr></tbody></table></div>
+<!--[if (gte mso 9)|(IE)]></td><td width="290" valign="top"><![endif]--><div style="width:100%;display:inline-block;vertical-align:top;max-width:290px" class="column"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:10px;width:100%;text-align:left;font-size:14px;word-break:break-word;color:#000000;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;line-height:21px"><div class="DraftEditor-root"><div class="DraftEditor-editorContainer"><div class="public-DraftEditor-content" contenteditable="false" spellcheck="false" style="outline:none;user-select:text;-webkit-user-select:text;white-space: normal;word-wrap:break-word"><div data-contents="true">
+<div class="" data-block="true" data-editor="38lkf" data-offset-key="dktej-0-0"><div data-offset-key="dktej-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><a href="http://google.com" style="color:#002349;text-decoration:underline"><span style="color:#002349;text-decoration:underline"><span data-offset-key="dktej-0-0"><span data-text="true">San Diego</span></span></span></a></div></div>
+<div class="" data-block="true" data-editor="38lkf" data-offset-key="cvjsk-0-0"><div data-offset-key="cvjsk-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><a href="http://google.com" style="color:#002349;text-decoration:underline"><span style="color:#002349;text-decoration:underline"><span data-offset-key="cvjsk-0-0"><span data-text="true">San Fransisco</span></span></span></a></div></div>
+<div class="" data-block="true" data-editor="38lkf" data-offset-key="96gt5-0-0"><div data-offset-key="96gt5-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><a href="http://google.com" style="color:#002349;text-decoration:underline"><span style="color:#002349;text-decoration:underline"><span data-offset-key="96gt5-0-0"><span data-text="true">Santa Barbara</span></span></span></a></div></div>
+<div class="" data-block="true" data-editor="38lkf" data-offset-key="e820-0-0"><div data-offset-key="e820-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><a href="http://google.com" style="color:#002349;text-decoration:underline"><span style="color:#002349;text-decoration:underline"><span data-offset-key="e820-0-0"><span data-text="true">Santa Fe</span></span></span></a></div></div>
+<div class="" data-block="true" data-editor="38lkf" data-offset-key="fj914-0-0"><div data-offset-key="fj914-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><a href="https://google.com" style="color:#002349;text-decoration:underline"><span style="color:#002349;text-decoration:underline"><span data-offset-key="fj914-0-0"><span data-text="true">Sarasota</span></span></span></a></div></div>
+<div class="" data-block="true" data-editor="38lkf" data-offset-key="3d7gk-0-0"><div data-offset-key="3d7gk-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><a href="http://google.com" style="color:#002349;text-decoration:underline"><span style="color:#002349;text-decoration:underline"><span data-offset-key="3d7gk-0-0"><span data-text="true">Scottsdale</span></span></span></a></div></div>
+<div class="" data-block="true" data-editor="38lkf" data-offset-key="13f2-0-0"><div style="text-align:left"><div data-offset-key="13f2-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><a href="http://google.com" style="color:#002349;text-decoration:underline"><span style="color:#002349;text-decoration:underline"><span data-offset-key="13f2-0-0"><span data-text="true">Sonoma</span></span></span></a></div></div></div>
+<div class="" data-block="true" data-editor="38lkf" data-offset-key="apft6-0-0"><div data-offset-key="apft6-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><a href="http://google.com" style="color:#002349;text-decoration:underline"><span style="color:#002349;text-decoration:underline"><span data-offset-key="apft6-0-0"><span data-text="true">Tampa Bay</span></span></span></a></div></div>
+<div class="" data-block="true" data-editor="38lkf" data-offset-key="79r2l-0-0"><div data-offset-key="79r2l-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><a href="http://google.com" style="color:#002349;text-decoration:underline"><span style="color:#002349;text-decoration:underline"><span data-offset-key="79r2l-0-0"><span data-text="true">The Hamptons</span></span></span></a></div></div>
+<div class="" data-block="true" data-editor="38lkf" data-offset-key="6ctu1-0-0"><div data-offset-key="6ctu1-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><a href="http://google.com" style="color:#002349;text-decoration:underline"><span style="color:#002349;text-decoration:underline"><span data-offset-key="6ctu1-0-0"><span data-text="true">Toronto</span></span></span></a></div></div>
+<div class="" data-block="true" data-editor="38lkf" data-offset-key="am550-0-0"><div data-offset-key="am550-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><a href="http://google.com" style="color:#002349;text-decoration:underline"><span style="color:#002349;text-decoration:underline"><span data-offset-key="am550-0-0"><span data-text="true">Washington D.C.</span></span></span></a></div></div>
+<div class="" data-block="true" data-editor="38lkf" data-offset-key="e4u2o-0-0"><div data-offset-key="e4u2o-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><a href="https://google.com" style="color:#002349;text-decoration:underline"><span style="color:#002349;text-decoration:underline"><span data-offset-key="e4u2o-0-0"><span data-text="true">Westchester</span></span></span></a></div></div>
+<div class="" data-block="true" data-editor="38lkf" data-offset-key="c9oce-0-0"><br></div>
+</div></div></div></div></td></tr></tbody></table></div>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+</td></tr></tbody></table></td></tr></tbody></table>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+</div>
+<div style="max-width:600px;Margin:0 auto">
+<!--[if (gte mso 9)|(IE)]><table width="600" align="center" cellpadding="0" cellspacing="0"><tr><td><![endif]--><table width="100%" style="border-spacing:0;font-family:sans-serif;Margin:0 auto;width:100%;max-width:600px" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:0"><img style="width:100%;border:0;height:35px" height="35" src="https://d2wn0fwevmicfp.cloudfront.net/images/empty.gif" alt=" "></td></tr></tbody></table>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+</div>
+<div style="max-width:600px;Margin:0 auto">
+<!--[if (gte mso 9)|(IE)]><table width="600" align="center" cellpadding="0" cellspacing="0"><tr><td><![endif]--><table width="100%" style="border-spacing:0;font-family:sans-serif;Margin:0 auto;width:100%;max-width:600px" cellpadding="0" cellspacing="0"><tbody><tr><td bgcolor="#ffffff" style="padding:0;background-color:#ffffff"><img style="width:100%;border:0;height:10px" height="10" src="https://d2wn0fwevmicfp.cloudfront.net/images/empty.gif" alt=" "></td></tr></tbody></table>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+</div>
+<div style="max-width:600px;Margin:0 auto">
+<!--[if (gte mso 9)|(IE)]><table width="600" align="center" cellpadding="0" cellspacing="0"><tr><td><![endif]--><table width="100%" bgcolor="#ffffff" style="border-spacing:0;font-family:sans-serif;Margin:0 auto;width:100%;max-width:600px;background-color:#ffffff" cellpadding="0" cellspacing="0" class="panel-mixed-horizontal-27"><tbody><tr><td style="padding:10px;text-align:center;font-size:0;border-collapse:collapse" class="twoColumnGroup" dir="ltr"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:0">
+<!--[if (gte mso 9)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" dir="ltr"><tr><td width="170" valign="top"><![endif]--><div class="column imgColumn" dir="rtl" style="width:100%;display:inline-block;max-width:170px;vertical-align:top"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:10px;width:100%;max-width:300px;height:auto;mso-line-height-rule:at-least" dir="ltr"><img src="https://sp.activepipe.com/image/108066560/DVFODlVWB1wDV1kOHFVTBFcfUlQBAhkLUlUES1EAXAFWB1QDBAYCWw==" style="width:100%;border:0;display:block;border-style:none;max-width:150px" width="150" border="0" alt=""></td></tr></tbody></table></div>
+<!--[if (gte mso 9)|(IE)]></td><td width="410" valign="top"><![endif]--><div class="column" dir="rtl" style="width:100%;display:inline-block;max-width:410px;vertical-align:top"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:10px;width:100%;text-align:left;font-size:14px;word-break:break-word;color:#000000;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;line-height:21px" dir="ltr"><div class="DraftEditor-root"><div class="DraftEditor-editorContainer"><div class="public-DraftEditor-content" contenteditable="false" spellcheck="false" style="outline:none;user-select:text;-webkit-user-select:text;white-space: normal;word-wrap:break-word"><div data-contents="true">
+<div class="" data-block="true" data-editor="hb8s" data-offset-key="dq5ki-0-0" style="color:#000000;font-size:14px;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;font-style:normal;line-height:30px"><div style="text-align:left"><div data-offset-key="dq5ki-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><a href="https://www.youtube.com/watch?v=6Ap2I_GBo94&amp;t=4s" style="color:#002349;text-decoration:underline"><span style="color:#002349;text-decoration:underline"><span data-offset-key="dq5ki-0-0" style="font-weight:bold"><span data-text="true">Sheila Hall </span></span></span></a></div></div></div>
+<div class="" data-block="true" data-editor="hb8s" data-offset-key="fcjuh-0-0"><div data-offset-key="fcjuh-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span data-offset-key="fcjuh-0-0"><span data-text="true">Associate Broker-REALTOR®, GRI, CIPS, SRS, CNE, e-PRO®</span></span></div></div>
+<div class="" data-block="true" data-editor="hb8s" data-offset-key="7nh8j-0-0"><div data-offset-key="7nh8j-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span data-offset-key="7nh8j-0-0"><span data-text="true">sheila@sheilahall.com </span></span></div></div>
+<div class="" data-block="true" data-editor="hb8s" data-offset-key="2f81o-0-0"><div data-offset-key="2f81o-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span data-offset-key="2f81o-0-0"><span data-text="true">2019 President Park City Board of Realtors   </span></span></div></div>
+<div class="" data-block="true" data-editor="hb8s" data-offset-key="aumfu-0-0"><div data-offset-key="aumfu-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span data-offset-key="aumfu-0-0"><span data-text="true">1750 Park Avenue |  Park City UT 84060</span></span></div></div>
+<div class="" data-block="true" data-editor="hb8s" data-offset-key="91v4a-0-0"><div data-offset-key="91v4a-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span data-offset-key="91v4a-0-0"><span data-text="true">435.640.7162   </span></span></div></div>
+</div></div></div></div></td></tr></tbody></table></div>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+</td></tr></tbody></table></td></tr></tbody></table>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+</div>
+<div style="max-width:600px;Margin:0 auto;background-color:#ffffff">
+<!--[if (gte mso 9)|(IE)]><table width="600" align="center" cellpadding="0" cellspacing="0"><tr><td><![endif]--><table width="100%" style="border-spacing:0;font-family:sans-serif;table-layout:fixed;Margin:0 auto;width:100%;max-width:600px" cellpadding="0" cellspacing="0" class="panel-text"><tbody><tr><td bgcolor="#ffffff" style="padding:10px;text-align:center;font-size:0" class="oneColumnGroup"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:0"><div style="width:100%;display:inline-block;vertical-align:top;max-width:580px" class="column"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:10px;width:100%;text-align:left;font-size:14px;word-break:break-word;color:#000000;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;line-height:21px"><div class="DraftEditor-root"><div class="DraftEditor-editorContainer"><div class="public-DraftEditor-content" contenteditable="false" spellcheck="false" style="outline:none;user-select:text;-webkit-user-select:text;white-space: normal;word-wrap:break-word"><div data-contents="true">
+<div class="" data-block="true" data-editor="6b74c" data-offset-key="dlh8s-0-0" style="font-size:11px;color:#666666;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;font-style:normal;line-height:21px"><div data-offset-key="dlh8s-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span data-offset-key="dlh8s-0-0"><span data-text="true">This material is based upon information that we consider reliable, but because it has been supplied by third parties, we cannot represent that it is accurate or complete, including price, or withdrawal without notice; square footage is an estimate only. ©MMXXI Sotheby’s International Realty Affiliates, Inc. All Rights Reserved. Sotheby’s International Realty® is a licensed trademark to Sotheby’s International Realty Affiliates, Inc. An Equal Opportunity Company. Each Office Is Independently Owned And Operated. Copyright© Summit Sotheby’s International Realty 2021.</span></span></div></div>
+<div class="" data-block="true" data-editor="6b74c" data-offset-key="e8sja-0-0" style="font-size:11px;color:#666666;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;font-weight:400;font-style:normal;line-height:21px"><br></div>
+</div></div></div></div></td></tr></tbody></table></div></td></tr></tbody></table></td></tr></tbody></table>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+</div>
+<div style="max-width:600px;Margin:0 auto">
+<!--[if (gte mso 9)|(IE)]><table width="600" align="center" cellpadding="0" cellspacing="0"><tr><td><![endif]--><table width="100%" style="border-spacing:0;font-family:sans-serif;table-layout:fixed;Margin:0 auto;width:100%;max-width:600px" cellpadding="0" cellspacing="0" class="panel-text"><tbody><tr><td style="padding:10px;text-align:center;font-size:0" class="oneColumnGroup"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:0"><div style="width:100%;display:inline-block;vertical-align:top;max-width:580px" class="column"><table width="100%" style="border-spacing:0;font-family:sans-serif" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding:10px;width:100%;text-align:left;font-size:11px;word-break:break-word;font-family:Source Sans Pro, Arial, Helvetica, sans-serif;color:#666666;line-height:18px;font-weight:400;font-style:normal"><div class="DraftEditor-root"><div class="DraftEditor-editorContainer"><div class="public-DraftEditor-content" contenteditable="false" spellcheck="false" style="outline:none;user-select:text;-webkit-user-select:text;white-space: normal;word-wrap:break-word"><div data-contents="true">
+<div class="" data-block="true" data-editor="bndh8" data-offset-key="fu3go-0-0"><div style="text-align:center"><div data-offset-key="fu3go-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span><span data-offset-key="fu3go-0-0"><span data-text="true">© MMXXI Sotheby’s International Realty Affiliates LLC. All Rights Reserved. Sotheby’s International Realty Affiliates LLC fully supports the principles of the Fair Housing Act and the Equal Opportunity Act. Each Office is Independently Owned and Operated. Sotheby’s International Realty and the Sotheby’s International Realty logo are registered (or unregistered) service marks licensed to Sotheby’s International Realty Affiliates LLC.</span></span></span></div></div></div>
+<div class="" data-block="true" data-editor="bndh8" data-offset-key="1faen-0-0"><br></div>
+<div class="" data-block="true" data-editor="bndh8" data-offset-key="6rr68-0-0"><div style="text-align:center"><div data-offset-key="6rr68-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr">
+<span data-offset-key="6rr68-0-0"><span data-text="true">This email was sent to </span></span><span data-offset-key="6rr68-2-0"><span data-text="true">.</span></span>
+</div></div></div>
+<div class="" data-block="true" data-editor="bndh8" data-offset-key="am614-0-0"><div style="text-align:center"><div data-offset-key="am614-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr">
+<span data-offset-key="am614-0-0"><span data-text="true">This email was sent by </span></span><a href="https://www.summitsothebysrealty.com/" style="color:#666666;text-decoration:underline"><span style="color:#666666;text-decoration:underline"><span data-offset-key="am614-1-0"><span data-text="true">Summit Sotheby's International Realty Park City - 625 Main</span></span></span></a><span data-offset-key="am614-2-0"><span data-text="true"> located at </span></span><span><span data-offset-key="am614-3-0"><span data-text="true">625</span></span></span><span data-offset-key="am614-4-0"><span data-text="true"> </span></span><span><span data-offset-key="am614-5-0"><span data-text="true">Main Street</span></span></span><span data-offset-key="am614-6-0"><span data-text="true"> </span></span><span><span data-offset-key="am614-7-0"><span data-text="true">Park City</span></span></span><span data-offset-key="am614-8-0"><span data-text="true"> </span></span><span data-offset-key="am614-10-0"><span data-text="true"> </span></span><span><span data-offset-key="am614-11-0"><span data-text="true">84060</span></span></span><span data-offset-key="am614-12-0"><span data-text="true">.</span></span>
+</div></div></div>
+<div class="" data-block="true" data-editor="bndh8" data-offset-key="56kd7-0-0"><div style="text-align:center"><div data-offset-key="56kd7-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr">
+<span data-offset-key="56kd7-0-0"><span data-text="true">Don't want to receive content from </span></span><span><span data-offset-key="56kd7-1-0"><span data-text="true">Sheila</span></span></span><span data-offset-key="56kd7-2-0"><span data-text="true"> </span></span><span><span data-offset-key="56kd7-3-0"><span data-text="true">Hall</span></span></span><span data-offset-key="56kd7-4-0"><span data-text="true"> anymore? </span></span><a href="https://managemypreferences.com/unsubscribe/preview/edit?token=nrmuew23dnmuew23dnmuew23dnmuew23dmarwwkclnnrwfibkqdamd2scvva-nqdbwfk2kzmvmucsdjdukusrkjcvewkukjcbkgyvpf3bkgybauaa6dq3aqaq4aa3lfbfwwy3lfbfwwy3lfbfwwy3lfbfwwy3lfbfwwy3lfbfwwy3lfbfwwy3lfbfwwy3lfbfwwy3lfbfwwy3lfbfwwy3lfbfwwy3lfbfwwy3lfbfwwy3incueuq3lfbfwwy3lfbfwwy3cuavibqgb5jbk2q" style="color:#666666;text-decoration:underline"><span style="color:#666666;text-decoration:underline"><span data-offset-key="56kd7-5-0"><span data-text="true">Unsubscribe here</span></span></span></a><span data-offset-key="56kd7-6-0"><span data-text="true">.</span></span>
+</div></div></div>
+<div class="" data-block="true" data-editor="bndh8" data-offset-key="2p4rq-0-0"><br></div>
+<div class="" data-block="true" data-editor="bndh8" data-offset-key="6l14m-0-0"><div style="text-align:center"><div data-offset-key="6l14m-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr">
+<span data-offset-key="6l14m-0-0"><span data-text="true">Powered by </span></span><a href="https://activepipe.com" style="color:#666666;text-decoration:underline"><span style="color:#666666;text-decoration:underline"><span data-offset-key="6l14m-1-0"><span data-text="true">ActivePipe</span></span></span></a><span data-offset-key="6l14m-2-0"><span data-text="true">, a </span></span><a href="https://moxiworks.com" style="color:#666666;text-decoration:underline"><span style="color:#666666;text-decoration:underline"><span data-offset-key="6l14m-3-0"><span data-text="true">MoxiWorks</span></span></span></a><span data-offset-key="6l14m-4-0"><span data-text="true"> Product</span></span>
+</div></div></div>
+</div></div></div></div></td></tr></tbody></table></div></td></tr></tbody></table></td></tr></tbody></table>
+<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+</div>
+</center>
+<span style="display:none !important;font-size:0;line-height:0;max-height:0;max-width:0;opacity:0;overflow:hidden;visibility:hidden;color:#F3F5F6">ActivePipe Message ID: 3064351</span>
+</body>
+</html>
